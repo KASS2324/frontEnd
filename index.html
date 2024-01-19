@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Accueil IT Training</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="LogoBleu.png" type="image/x-icon">
 </head>
 <body>
     <header>
         <div class="header">
             <div>
-                <img id="logo" src="LogoBleu.png">
+                <img id="logo" src="LogoBleu.png" alt="le logo">
             </div>
             <div>
                 <h1>IT Training</h1>
@@ -20,35 +22,47 @@
                 <button>GO</button>
             </div>
         </div>
-        <div class="menu">
-            <a href="">formations ></a>
-        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#rechercherFormation">Formations</a>
+                </li>
+                <li>
+                    <a href="./recherche.html">Recherche</a>
+                </li>
+            </ul>
+        </nav>
         
     </header>
     <main>
-        <div class="rechercherFormation">
+        <section class="rechercherFormation" id="rechercherFormation">
             <h2>Rechercher une formation</h2>
-            <div>
-                <input>
-                <button>GO</button>
-            </div>
-            <div>
-                <select name="" id="">
-                    <option value="thème">choisissez un thème</option>
-                </select>
-            </div>
-            <div>
-                <select name="" id="">
-                    <option value="sous-thème">choisissez un sous-thème</option>
-                </select>
-            </div>
-        </div>
-        <div>
-            <p>Charabia Keshika</p>
-        </div>
+            <form action="./recherche.html" method="post" id="rechForm">
+                <div>
+                    <input type="text">
+                    <button type="submit">GO</button>
+                </div>
+                <div>
+                    <select name="theme" id="theme" aria-placeholder="choisissez un thème">
+                        <option value="management">Management des SI</option>
+                        <option value="gestion">Gestion de projet</option>
+                        <option value="developpement">Développement d'application</option>
+                    </select>
+                </div>
+                <div>
+                    <select name="soustheme" id="soustheme">
+                        <option value="sous-thème">choisissez un sous-thème</option>
+                    </select>
+                </div>
+            </form>
+        </section>
     </main>
-    <footer>
-
+    <footer id="footer">
+        <div>
+            <p>Qualité et certifications</p>
+            <img src="./certifications-ib.jpg" alt="certifications">
+        </div>
+        <p>&copy; 2024 IT Training</p>
     </footer>
 </body>
 </html>
