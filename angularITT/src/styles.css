@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Montserrat";
+    src:
+      url("assets/Montserrat-Regular.ttf");
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --first-color: #119DA4;
+    --second-color: #0C7489;
+    --third-color: #13505B;
+    --main-bg-color: #040404;
+    --second-bg-color: #D7D9CE;
+
+    font-family: "Montserrat";
+    color: var(--main-bg-color);
+}
+a {
+    text-decoration: none;
+}

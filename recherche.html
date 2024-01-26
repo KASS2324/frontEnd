@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche IT Training</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="recherche.css">
+    <link rel="shortcut icon" href="LogoBleu.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div>
+                <a href="./index.html">
+                    <img id="logo" src="LogoBleu.png" alt="le logo">
+                </a>    
+            </div>
+            <div>
+                <h1>IT Training</h1>
+            </div>
+            <div>
+                <input>
+                <button>GO</button>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <a href="#footer">
+                    <li>
+                        Formations
+                    </li>
+                </a>
+                <a href="./recherche.html">
+                    <li>
+                        Recherche
+                    </li>
+                </a>
+            </ul>
+        </nav>
+        
+    </header>
+    <main>
+        <section class="rechercheTitle">
+            <h2>Recherche</h2>
+        </section>
+        <section class="rechercheEtResultats">
+            <section class="rechercheForm">
+                <form action="./recherche.html" method="post" id="rechForm">
+                    <fieldset>
+                        <legend>Critères</legend>
+                        <div>
+                            <select name="theme" id="theme">
+                                <option value="thème">choisissez un thème</option>
+                            </select>
+                        </div>
+                        <div>
+                            <select name="soustheme" id="soustheme">
+                                <option value="sous-thème">choisissez un sous-thème</option>
+                            </select>
+                        </div>
+
+                        <fieldset>
+                            <legend>Villes</legend>
+                            <div class="ligneSelection">
+                                <input type="radio" name="ville" id="ville1" checked><label for="ville1">Lille</label>
+                            </div> 
+                            <div class="ligneSelection">  
+                                <input type="radio" name="ville" id="ville2"><label for="ville2">Paris</label> 
+                            </div> 
+                            <div class="ligneSelection">
+                                <input type="radio" name="ville" id="ville3"><label for="ville3">Rouen</label>   
+                            </div>
+                                            
+                        </fieldset>
+                        <fieldset>
+                            <legend>Durées</legend>
+                            <div class="ligneSelection">
+                                <input type="checkbox" name="check1" id="check1" checked><label for="check1">1 mois</label>
+                            </div> 
+                            <div class="ligneSelection">  
+                                <input type="checkbox" name="check2" id="check2"><label for="check2">2 mois</label> 
+                            </div> 
+                            <div class="ligneSelection">
+                                <input type="checkbox" name="check3" id="check3"><label for="check3">3 mois</label>   
+                            </div>
+                                            
+                        </fieldset>
+                        <div class="boutons">
+                            <button type="submit">Valider</button>
+                            <button type="reset">Réinitialiser</button>
+                        </div>
+                        
+                    </fieldset>
+                </form>
+            </section>
+            <section class="resultats">
+                <div class="resultat">
+                    <div class="resultatTitre">
+                        <span>Kubernetes - Orchestration des conteneurs</span>
+                        <span>1510,00 € HT</span>
+                    </div>
+                    
+                    <p>
+                        Utiliser la plate-forme Open Source Kubernetes pour automatiser le déploiement, la montée en charge et la mise en oeuvre de conteneurs d’applications
+                    </p>
+                </div>
+                <div class="resultat">
+                    <div class="resultatTitre">
+                        <span>Ansible - Automatiser la gestion des serveurs</span>
+                        <span>1550,00 € HT</span>
+                    </div>
+                    
+                    <p>
+                        Automatiser la configuration et le déploiement d’applications avec la solution Open Source Ansible
+                    </p>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer id="footer">
+        <div>
+            <p>Qualité et certifications</p>
+            <img src="./certifications-ib.jpg" alt="certifications">
+        </div>
+        <p>&copy; 2024 IT Training</p>
+    </footer>
+</body>
+</html>
