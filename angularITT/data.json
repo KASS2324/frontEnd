@@ -1,7 +1,7 @@
 {
   "formations": [
     {
-      "id": 1,
+      "id": "1",
       "nom": "Formation - Développement Java avancé et accès aux données",
       "categorie": "Formations en informatique",
       "theme": "Langages informatiques",
@@ -11,7 +11,7 @@
       "duree": "4 jours (28 heures)"
     },
     {
-      "id": 2,
+      "id": "2",
       "nom": "Certification Développement de sites web dynamiques (option langage PHP)",
       "categorie": "Formations en informatique",
       "theme": "Certifications ENI",
@@ -20,5 +20,6 @@
       "description": "Se former aux principales librairies du langage",
       "duree": "8h45min"
     }
-  ]
+  ],
+  "demandeSpe": []
 }
