@@ -1,0 +1,19 @@
+
+.container{
+    
+    background-color: var(--second-bg-color);
+    max-width: 900px;
+    width:100%;
+    border-radius: 6px;
+    padding:30px;
+    margin:0 15 px;
+    box-shadow: 0 5px 10px var(--third-color);
+
+}
+
+.container form{
+    
+    margin-top: 16px;
+    min-height: 490px;
+    background-color: var(--second-bg-color) ;
+}

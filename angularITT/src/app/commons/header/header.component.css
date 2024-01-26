@@ -36,3 +36,14 @@ nav ul li {
 nav ul li:hover {
     background-color: var(--second-color);
 }
+
+.nav-buttons{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.nav-button{
+    margin-right:1rem;
+   
+}
