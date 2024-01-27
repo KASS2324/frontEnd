@@ -27,4 +27,8 @@ export class FormationService {
   updateFormation(formation: Formation): Observable<Formation> {
     return this.httpClient.put<Formation>(`${this.apiUrl}/formations/${formation.id}`, formation);
   }
+
+  getFormationsByVille(ville: string): Observable<Formation[]> {
+    return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations?ville=${ville}`);
+  }
 }

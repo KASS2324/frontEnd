@@ -7,4 +7,5 @@ export default interface Formation {
     prix: string;
     description: string;
     duree: string;
+    ville: string;
 }

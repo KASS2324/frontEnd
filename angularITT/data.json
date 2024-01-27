@@ -8,7 +8,8 @@
       "sousTheme": "Java",
       "prix": "2 410,00 €  HT",
       "description": "Se former aux principales librairies du langage",
-      "duree": "4 jours (28 heures)"
+      "duree": "4 jours (28 heures)",
+      "ville": "Lille"
     },
     {
       "id": "2",
@@ -18,8 +19,32 @@
       "sousTheme": "Certifications PHP",
       "prix": "180,00 €  HT",
       "description": "Se former aux principales librairies du langage",
-      "duree": "8h45min"
+      "duree": "8h45min",
+      "ville": "Paris"
     }
   ],
-  "demandeSpe": []
+  "demandeSpe": [
+    {
+      "id": "2570",
+      "nom": "Foucault",
+      "prenom": "Sylvain",
+      "email": "sylvainfoucault1@gmail.com",
+      "telephones": [
+        "0768766012"
+      ],
+      "entreprise": "company",
+      "typeFormation": "interEntreprise",
+      "demande": "ma demande parsque"
+    }
+  ], 
+  "themes": [
+    {
+      "id": "1",
+      "intitule": "Langages informatiques"
+    },
+    {
+      "id": "2",
+      "intitule": "Certifications ENI"
+    }
+  ]
 }
