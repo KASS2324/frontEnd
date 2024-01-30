@@ -2,67 +2,6 @@
     <h2>Recherche</h2>
 </section>
 <section class="rechercheEtResultats">
-    <section class="rechercheForm">
-        <form action="./recherche.html" method="post" id="rechForm">
-            <fieldset>
-                <legend>Critères</legend>
-                <div>
-                    <select name="theme" id="theme">
-                        <option value="thème">choisissez un thème</option>
-                    </select>
-                </div>
-                <div>
-                    <select name="soustheme" id="soustheme">
-                        <option value="sous-thème">choisissez un sous-thème</option>
-                    </select>
-                </div>
-
-                <fieldset>
-                    <legend>Villes</legend>
-                    <div class="ligneSelection">
-                        <input type="radio" name="ville" id="ville1" checked><label for="ville1">Lille</label>
-                    </div> 
-                    <div class="ligneSelection">  
-                        <input type="radio" name="ville" id="ville2"><label for="ville2">Paris</label> 
-                    </div> 
-                    <div class="ligneSelection">
-                        <input type="radio" name="ville" id="ville3"><label for="ville3">Rouen</label>   
-                    </div>
-                                    
-                </fieldset>
-                <fieldset>
-                    <legend>Durées</legend>
-                    <div class="ligneSelection">
-                        <input type="checkbox" name="check1" id="check1" checked><label for="check1">1 mois</label>
-                    </div> 
-                    <div class="ligneSelection">  
-                        <input type="checkbox" name="check2" id="check2"><label for="check2">2 mois</label> 
-                    </div> 
-                    <div class="ligneSelection">
-                        <input type="checkbox" name="check3" id="check3"><label for="check3">3 mois</label>   
-                    </div>
-                                    
-                </fieldset>
-                <div class="boutons">
-                    <button type="submit">Valider</button>
-                    <button type="reset">Réinitialiser</button>
-                </div>
-                
-            </fieldset>
-        </form>
-    </section>
-    <section class="resultats">
-        @for (formation of formations; track formation) {
-            <div class="resultat">
-                <div class="resultatTitre">
-                    <span>{{ formation.nom }}</span>
-                    <span>{{ formation.prix }}</span>
-                </div>
-                
-                <p>
-                    {{ formation.description }}
-                </p>
-            </div>
-        }
-    </section>
+    <app-criteres-recherche (onSelection)="selection($event)"></app-criteres-recherche>
+    <app-resultats-recherche [formations]="formations"></app-resultats-recherche>
 </section>

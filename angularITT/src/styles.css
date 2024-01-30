@@ -24,6 +24,7 @@ body {
 a {
     text-decoration: none;
 }
+
 html, body { 
     height: 100%;
     scroll-behavior: smooth;
@@ -57,4 +58,5 @@ html, body {
     max-width: 20px;
     max-height: 40px;
 }
+
 
