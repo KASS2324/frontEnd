@@ -27,4 +27,16 @@ export class FormationService {
   updateFormation(formation: Formation): Observable<Formation> {
     return this.httpClient.put<Formation>(`${this.apiUrl}/formations/${formation.id}`, formation);
   }
+
+  getFormationsByVille(ville: string): Observable<Formation[]> {
+    return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations?ville=${ville}`);
+  }
+
+  getFormationsByTheme(theme: string): Observable<Formation[]> {
+    return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations?theme=${theme}`);
+  }
+
+  getFormationsByThemeAndVille(theme: string, ville: string): Observable<Formation[]> {
+    return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations?theme=${theme}&ville=${ville}`);
+  }
 }
