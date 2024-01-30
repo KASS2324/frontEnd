@@ -1,13 +1,24 @@
 
+.FormulaireTitle {
+    height: 100px;
+    background-color: var(--main-bg-color);
+    color: var(--second-bg-color);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 2rem;
+}
 .container{
     
     background-color: var(--second-bg-color);
     max-width: 900px;
     width:100%;
     border-radius: 6px;
-    padding:30px;
-    margin:0 15 px;
+    margin:25%;
     box-shadow: 0 5px 10px var(--third-color);
+    display: flex;
+    justify-content: center;
+    
 
 }
 
@@ -16,4 +27,5 @@
     margin-top: 16px;
     min-height: 490px;
     background-color: var(--second-bg-color) ;
+
 }
