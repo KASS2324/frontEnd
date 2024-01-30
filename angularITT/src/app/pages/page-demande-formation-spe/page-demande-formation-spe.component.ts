@@ -26,7 +26,7 @@ export class PageDemandeFormationSpeComponent {
     telephones: this.formBuilder.array([
       this.formBuilder.control('', [Validators.minLength(10), Validators.required]),
     ]),
-    entreprise: ['', [Validators.minLength(2), Validators.required]],
+    entreprise: [''],
     typeFormation:['',],
     demande: ['', [Validators.minLength(2), Validators.required]],
 

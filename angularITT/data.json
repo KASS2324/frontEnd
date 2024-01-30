@@ -33,18 +33,7 @@
       "entreprise": "nllabla blabla",
       "typeFormation": "interEntreprise",
       "demande": "zffzgfze"
-    },
-    {
-      "id": "0967",
-      "nom": "blabla",
-      "prenom": "nllabla",
-      "email": "blabla@gmail.com",
-      "telephones": [
-        "0101010101"
-      ],
-      "entreprise": "nllabla blabla",
-      "typeFormation": "intraEntreprise",
-      "demande": "czecrezvrevregf'e"
     }
+    
   ]
 }
