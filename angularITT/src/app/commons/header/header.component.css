@@ -1,49 +1,55 @@
 .headerContainer {
     height: 146px;
+    
 }
 header {
     background-color: var(--second-bg-color);
     padding: 1rem;
-    position: fixed;
     width: 100%;
+    align-items: center;
+    position:absolute;
+    position: fixed;
+    box-shadow: 0 0px 10px var(--third-color);
+    
     
 }
 .header {
-    display: flex;
-    justify-content: space-between;
+    display:flex;
+    justify-content: space-around;
     align-items: center;
+    
+    
 }
+
+.header-title{
+    margin-right: 5rem;
+    margin-left: 10rem;
+    font-family: "Montserrat",Roboto, "Helvetica Neue", sans-serif;
+    font-weight: 900;
+}
+
 #logo {
     width: 50%;
 }
-h1 {
-    font-weight: 900;
-}
-ul {
-    list-style-type: none;
-}
-nav {
-    display: flex;
-    justify-content: center;
-}
-nav ul {
-    display: flex;
-}
-nav ul li {
-    background-color: var(--first-color);
-    padding: .7rem;
-}
-nav ul li:hover {
-    background-color: var(--second-color);
-}
+
 
 .nav-buttons{
     display: flex;
     align-content: center;
     justify-content: center;
-}
-
-.nav-button{
-    margin-right:1rem;
+    background-color: var(--second-bg-color);
    
 }
+
+/* .nav-buttons ::backdrop{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: var(--second-bg-color);
+
+} */
+
+.nav-button{
+    margin-right:1rem;   
+}
+
