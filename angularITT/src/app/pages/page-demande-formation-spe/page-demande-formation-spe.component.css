@@ -1,5 +1,5 @@
 
-.FormulaireTitle {
+section.formulaireTitle {
     height: 100px;
     background-color: var(--main-bg-color);
     color: var(--second-bg-color);
@@ -14,10 +14,11 @@
     max-width: 900px;
     width:100%;
     border-radius: 6px;
-    margin:25%;
+    margin:10%;
     box-shadow: 0 5px 10px var(--third-color);
     display: flex;
     justify-content: center;
+    align-items: center;
     
 
 }
