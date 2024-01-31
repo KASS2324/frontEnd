@@ -1,3 +1,11 @@
+body.formulaire-body{
+    display: flex;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+    background: url(../../../assets/campaign-creators.jpg);
+    background-size: cover;
+}
 
 section.formulaireTitle {
     height: 100px;
@@ -11,6 +19,7 @@ section.formulaireTitle {
 .container{
     
     background-color: var(--second-bg-color);
+    opacity: 0.5;
     max-width: 900px;
     width:100%;
     border-radius: 6px;
@@ -29,4 +38,8 @@ section.formulaireTitle {
     min-height: 490px;
     background-color: var(--second-bg-color) ;
 
+}
+
+.input text{
+    opacity: 1;
 }
