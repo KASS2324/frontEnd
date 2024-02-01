@@ -8,11 +8,11 @@ import Theme from '../models/theme.model';
 })
 export class ThemeService {
 
-  private apiUrl = "http://localhost:3000";
+  private apiUrl = "http://localhost:8080";
 
   constructor(private httpClient: HttpClient) { }
 
   getThemes(): Observable<Theme[]> {
-    return this.httpClient.get<Theme[]>(`${this.apiUrl}/themes`);
+    return this.httpClient.get<Theme[]>(`${this.apiUrl}/themes/all`);
   }
 }
