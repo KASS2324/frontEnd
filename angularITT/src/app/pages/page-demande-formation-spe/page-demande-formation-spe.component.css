@@ -3,7 +3,7 @@ body.formulaire-body{
     height:100vh;
     justify-content: center;
     align-items: center;
-    background: url(../../../assets/campaign-creators.jpg);
+    background: url(../../../assets/fond-bureau.jpg);
     background-size: cover;
 }
 
@@ -37,6 +37,7 @@ section.formulaireTitle {
     margin-top: 16px;
     min-height: 490px;
     background-color: var(--second-bg-color) ;
+    opacity: 1;
 
 }
 
