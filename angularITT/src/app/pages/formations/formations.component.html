@@ -1,7 +1,11 @@
-<section class="rechercheTitle">
-    <h2>Recherche</h2>
-</section>
-<section class="rechercheEtResultats">
-    <app-criteres-recherche (onSelection)="selection($event)"></app-criteres-recherche>
-    <app-resultats-recherche [formations]="formations"></app-resultats-recherche>
-</section>
+<body class="formation">
+    <section class="rechercheTitle">
+        <h2>Recherche</h2>
+    </section>
+    <section class="rechercheEtResultats">
+        <app-criteres-recherche (onSelection)="selection($event)"></app-criteres-recherche>
+        <app-resultats-recherche [formations]="formations"></app-resultats-recherche>
+    </section> 
+   
+</body>
+

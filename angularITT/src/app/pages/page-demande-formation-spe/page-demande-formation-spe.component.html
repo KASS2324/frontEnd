@@ -1,37 +1,12 @@
+<section class="formulaireTitle">
+  <h2>Demande de Formation Personalisée  </h2>
+</section>
 
-<body>
+<body class="formulaire-body">
 
-  @for (user of users; track user) {
-    <div class="'container">
-      <div class="background">
-        <div class="card-header">
-          {{ user.entreprise }}
-    
-          <div class="card">
-            <div class="name">
-              {{ user.prenom }} {{ user.nom }}
-            </div>
-            <div class="info">
-              <p>email : {{ user.email }}</p>
-              <p>Tel : {{ user.telephones }}</p>
-              <p>Type Formation : {{user.typeFormation}}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  }
 
-  <!-- <section class="rechercheTitle">
-    <h2>Demande de Formation Spécialisée</h2>
-  </section> -->
-
- 
-  
   <div class="container">
 
-    <h1 class="formulaireTitle">Demande de Formation Spécialisée</h1>
-  
     <form class="form-body" [formGroup]="userForm" (ngSubmit)="onSubmit()">
       <!-- Nom -->
       <div>
