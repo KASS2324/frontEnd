@@ -29,14 +29,14 @@ export class FormationService {
   }
 
   getFormationsByVille(ville: string): Observable<Formation[]> {
-    return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations?ville=${ville}`);
+    return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations/byVille?ville=${ville}`);
   }
 
   getFormationsByTheme(theme: string): Observable<Formation[]> {
-    return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations?theme=${theme}`);
+    return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations/byTheme?theme=${theme}`);
   }
 
   getFormationsByThemeAndVille(theme: string, ville: string): Observable<Formation[]> {
-    return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations?theme=${theme}&ville=${ville}`);
+    return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations/byThemeAndVille?theme=${theme}&ville=${ville}`);
   }
 }
