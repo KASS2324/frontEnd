@@ -1,0 +1,238 @@
+<section class="formulaireTitle">
+  <h2>Demande de Formation Personalisée  </h2>
+</section>
+
+<body class="formulaire-body">
+
+
+  <div class="container">
+
+    <form class="form-body" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <!-- Nom -->
+      <div>
+        <label for="nom">Nom : </label>
+        <input
+          type="text"
+          id="nom"
+          formControlName="nom"
+          placeholder="Nom"
+        />
+  
+        @if (submitted && form['nom'].invalid) {
+        <span>
+          @if (form['nom'].hasError('minlength')) {
+             <span>
+              * Nom doit contenir au minimum 2 caractères
+            </span>
+          }
+          @if (!form['nom'].value) {
+            <span>
+              * Nom obligatoire
+            </span>
+           }
+        </span>
+       }
+      </div>
+
+
+      <!-- Prenom -->
+      <div>
+        <label for="prenom">Prenom : </label>
+        <input
+          type="text"
+          id="prenom"
+          formControlName="prenom"
+          placeholder="Prenom"
+        />
+        @if (submitted && form['prenom'].invalid) {
+        <span>
+          @if (form['prenom'].hasError('minlength')) {
+          <span>
+            * Prénom doit contenir au minimum 2 caractères
+          </span>
+        }
+          @if (!form['prenom'].value) {
+          <span>
+            * Prénom obligatoire
+          </span>
+        }
+        </span>
+      }
+      </div>
+
+      <!-- Type de Formation -->
+      <div>
+        <label for="typeFormation">Type de Formation : </label>
+        <div>
+          <input
+          type="radio"
+          id="interEntreprise"
+          formControlName="typeFormation"
+          value="interEntreprise"
+          name="typeFormation" />
+
+          <label for="interEntreprise">Inter-Entreprise</label>
+        </div>
+
+        <div>
+          <input
+          type="radio"
+          id="intraEntreprise"
+          formControlName="typeFormation"
+          value="intraEntreprise"
+          
+          name="typeFormation" />
+
+          <label for="intraEntreprise">Intra-Entreprise</label>
+        </div>
+
+        <div>
+          <input
+          type="radio"
+          id="autre"
+          formControlName="typeFormation"
+          value="autre"
+          
+          name="typeFormation" />
+
+          <label for="autre">Autre</label>
+        </div>
+        
+        @if (submitted && form['typeFormation'].invalid) {
+        <span>
+          @if (!form['typeFormation'].value) {
+          <span>
+            * Champ obligatoire
+          </span>
+        }
+        </span>
+      }
+      </div>
+
+
+      <!-- Nom de l'Entreprise -->
+      <div>
+        <label for="entreprise">Nom de l'Entreprise : </label>
+        <input
+          type="text"
+          id="entreprise"
+          formControlName="entreprise"
+          placeholder="Entreprise"
+        />
+        @if (submitted && form['entreprise'].invalid) {
+        <span>
+          @if (form['entreprise'].hasError('minlength')) {
+          <span>
+            * Entreprise doit contenir au minimum 2 caractères
+          </span>
+         }
+          @if (!form['entreprise'].value) {
+          <span>
+            * Entreprise obligatoire
+          </span>
+         }
+        </span>
+       }
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email">Email : </label>
+        <input
+          type="email"
+          id="email"
+          formControlName="email"
+          placeholder="Email"
+        />
+        @if (submitted && form['email'].invalid) {
+        <span>
+          @if (form['email'].hasError('email')) {
+          <span>
+            * Email invalide
+          </span>
+         }
+          @if (!form['email'].value) {
+          <span>
+            * Email obligatoire
+          </span>
+         }
+        </span>
+      }
+      </div>
+
+      <!-- Telephone -->
+      <div formArrayName="telephones">
+              @for (telephone of telephones.controls; track telephone; let i = $index) {
+              <div>
+                <label for="telephone">Telephone : </label>
+                <input
+                  type="tel"
+                  id="telephone"
+                  [formControlName]="i"
+                  placeholder="Telephone"
+                />
+  
+                @if (submitted && telephone.invalid) {
+                <span>
+                  @if (telephone.hasError('minlength')) {
+                  <span>
+                    * Telephone doit contenir au moins 10 chiffres
+                  </span>
+                }
+                  @if (!telephone.value) {
+                  <span>
+                    * Téléphone obligatoire
+                  </span>
+                }
+                </span>
+              }
+              </div>
+            }
+  
+              <button type="button" (click)="addTelephone()">+</button>
+              @if (telephones.length > 1) {
+                <button type="button" (click)="removeTelephone()">-</button>
+              }
+        </div>
+
+        <!-- Demande de Formation Spécialisée -->
+      <div>
+        <label for="demande">Demande de Formation Spécialisée : </label>
+        <textarea
+          id="demande"
+          formControlName="demande"
+          placeholder="Demande"
+        >
+        
+        </textarea>
+          
+        
+        @if (submitted && form['demande'].invalid) {
+        <span>
+          @if (form['demande'].hasError('minlength')) {
+          <span>
+            * La Demande doit contenir au minimum 2 caractères
+          </span>
+         }
+          @if (!form['demande'].value) {
+          <span>
+            * Demande obligatoire
+          </span>
+         }
+        </span>
+       }
+      </div>
+      <!-- Button Submit -->
+            <div>
+              <button type="submit">Envoyer</button>
+            </div>
+    
+      </form>
+    </div>
+
+    
+
+
+
+</body>
+    

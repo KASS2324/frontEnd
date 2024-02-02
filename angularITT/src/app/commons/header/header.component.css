@@ -1,0 +1,56 @@
+.headerContainer {
+    height: 146px;
+    
+}
+header {
+    background-color: var(--second-bg-color);
+    padding: 1rem;
+    width: 100%;
+    z-index:2;
+    align-items: center;
+    position:absolute;
+    position: fixed;
+    box-shadow: 0 0px 10px var(--third-color);
+    
+    
+}
+.header {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    
+}
+
+.header-title{
+    margin-right: 5rem;
+    margin-left: 10rem;
+    font-family: "Montserrat",Roboto, "Helvetica Neue", sans-serif;
+    font-weight: 900;
+}
+
+#logo {
+    width: 50%;
+}
+
+
+.nav-buttons{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: var(--second-bg-color);
+   
+}
+
+/* .nav-buttons ::backdrop{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: var(--second-bg-color);
+
+} */
+
+.nav-button{
+    margin-right:1rem;   
+}
+
