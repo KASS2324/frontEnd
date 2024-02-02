@@ -1,0 +1,124 @@
+
+
+
+
+
+#titre1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+     margin-top:50px;
+    margin-bottom: 50px;
+  
+ 
+
+    }
+#titre2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+ 
+
+}
+ .block   {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    word-spacing: 200px;
+    color: #0496ff;
+
+  
+ }
+ div .formule1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    
+ }
+
+ div.parent{
+    height: 300px;
+    border: solid 5px color(red);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+  
+
+ 
+
+}
+div.box1{
+    width: 300px;
+    height: 200px;
+    background-color: var(--second-bg-color) ;
+
+}
+
+.parent h3{
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+p{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.parent a{
+    text-align: center;
+    color : white;
+    background-color : #0496ff;
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+   border: solid;
+   padding: 5px;
+
+   
+
+}
+
+
+
+div.box2{
+    width: 300px;
+    height: 200px;
+    background-color: var(--second-bg-color) ;
+}
+
+
+div.box3{
+    width: 300px;
+    height: 200px;
+    background-color:  var(--second-bg-color);
+}
+
+#rh{
+    word-spacing :4px;
+}
+div a {
+    font-weight: bold;
+    color: black;
+
+}
+
+
+
+
+
+
+
+
+
+
+
