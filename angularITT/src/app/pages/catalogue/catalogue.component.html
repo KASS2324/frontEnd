@@ -1,64 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <section class="catalogue">
-        <div class="titres">
-        <H2 id="titre1"> NOS CATALOGUES DES FORMATIONS </H2>
-    
-        <H4 id="titre2">A ce jour,nous vous proposons plus de 800 formations </H4>
-        </div>
-        <div class="block" >
-       
-            <a href="rh" id="rh" >Ressources humaines  </a>
-            <a href="management" id="management">Management</a> 
-            <a href="finance" id="finance">Finances</a>
-            <a href="informatique" id="informatique">Informatiques</a>
-            <a href="video" id="video"> Videos </a>
-      
-          
-        </div>
-
-    </section>
-
-            <div class="formule1">
-            <H2> 3 formules :   </H2>
-          </div>
-
-           <div class="parent">
-            
-              <div class="box1">
-                <h3> 1. Intra-entreprise</h3> 
-                <p>C'est une action de formation pour une seule entreprise et pour un ou plusieurs de vos collaborateurs. 
-                  Vous choisissez le lieu et la date à votre convenance. <br> <br>
-                  <a href="intra"> Catalogue intra-entrprise</a>
-                </p>
-
-              </div>
-              <div class="box2">
-                  <h3> 2. Inter-entreprise</h3>
-                  <p>
-                    C'est une action de formation qui regroupe des salariés de diverses entreprises dans une même session.
-                     Le lieu et les dates sont imposées. <br> <br>
-                     <a href="inter">Catalogue inter-entrprise</a>
-                  </p> 
-              </div>
-              <div class="box3">
-                <h3> 3. A distance </h3>
-                <p> 
-                  C'est une action de formation que nous réalisons à distance.
-                   Nous pouvons adapter les dates, les horaires et le rythme à vos besoins. <br> <br> 
-                   <a href="distance"> Catalogue à distance</a>
-                </p>
 
 
-              </div>
-            </div>
+<section class="baniere">
+  <article class="catalogue">
+    <div class="titres">
+      <H2 id="titre1"> NOS CATALOGUES DES FORMATIONS
+      </H2>
 
-      
-  </body>
-</html>
+      <H4 id="titre2">A ce jour,nous vous proposons plus de 800 formations
+
+      </H4>
+    </div>
+    <div class="block">
+
+
+      <mat-toolbar class="catalogue-button" >
+        <button class="rh-button" mat-raised-button routerLink="home">Ressources humaines </button>
+        <button class="nav-button"  mat-raised-button routerLink="catalogue"> Management </button>
+        <button class="nav-button"  mat-raised-button routerLink="formations">Finances</button>
+        <button class="nav-button"  mat-raised-button routerLink="demande-formation-spe">Informatiques </button> 
+
+    </mat-toolbar>
+
+
+
+
+
+    </div>
+
+  </article>
+
+
+  <div class="formule1">
+    <H2> 3 formules : </H2>
+  </div>
+
+  <div class="parent">
+
+    <div class="box1">
+      <h3> Intra-entreprise</h3>
+      <p>C'est une action de formation pour une seule entreprise et pour un ou plusieurs de vos collaborateurs.
+        Vous choisissez le lieu et la date à votre convenance. <br> <br>
+
+      </p>
+
+    </div>
+    <div class="box2">
+      <h3> Inter-entreprise</h3>
+      <p>
+        C'est une action de formation qui regroupe des salariés de diverses entreprises dans une même session.
+        Le lieu et les dates sont imposées. <br> <br>
+
+      </p>
+    </div>
+    <div class="box3">
+      <h3> Demande Individuelle </h3>
+
+      <p>
+        C'est une action de formation que nous réalisons de façon Personalisée.
+        Nous pouvons adapter les dates, les horaires et le rythme à vos besoins. <br> <br>
+      </p>
+    </div>
+
+  </div>
+
+    <div>
+      <mat-toolbar class="button-individuel1">
+        <button class="individuel1" mat-raised-button routerLink="catalogue">CATALOGUES</button>
+        <button class="individuel2" mat-raised-button routerLink="catalogue">DEMANDE PERSONALISEE</button>
+      </mat-toolbar>
+    </div>
+</section>
+
+
+
+
+
+
