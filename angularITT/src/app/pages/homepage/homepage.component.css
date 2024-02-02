@@ -19,5 +19,9 @@ main {
 #rechForm {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1rem;;
+}
+
+#go-homepage{
+    z-index: 0;
 }

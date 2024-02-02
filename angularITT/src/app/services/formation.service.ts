@@ -8,12 +8,12 @@ import Formation from '../models/formation.model';
 })
 export class FormationService {
 
-  private apiUrl = "http://localhost:3000";
+  private apiUrl = "http://localhost:8080";
 
   constructor(private httpClient: HttpClient) { }
 
   getFormations(): Observable<Formation[]> {
-    return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations`);
+    return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations/all`);
   }
 
   getFormation(id: number): Observable<Formation> {
@@ -26,5 +26,17 @@ export class FormationService {
 
   updateFormation(formation: Formation): Observable<Formation> {
     return this.httpClient.put<Formation>(`${this.apiUrl}/formations/${formation.id}`, formation);
+  }
+
+  getFormationsByVille(ville: string): Observable<Formation[]> {
+    return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations?ville=${ville}`);
+  }
+
+  getFormationsByTheme(theme: string): Observable<Formation[]> {
+    return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations?theme=${theme}`);
+  }
+
+  getFormationsByThemeAndVille(theme: string, ville: string): Observable<Formation[]> {
+    return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations?theme=${theme}&ville=${ville}`);
   }
 }

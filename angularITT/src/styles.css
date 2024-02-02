@@ -18,9 +18,45 @@ body {
     --main-bg-color: #040404;
     --second-bg-color: #D7D9CE;
 
-    font-family: "Montserrat";
+    font-family: "Montserrat",Roboto, "Helvetica Neue", sans-serif;
     color: var(--main-bg-color);
 }
 a {
     text-decoration: none;
 }
+
+html, body { 
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+
+.container{
+    
+    background-color: var(--second-bg-color);
+    max-width: 900px;
+    width:100%;
+    border-radius: 6px;
+    padding:30px;
+    margin:0 15 px;
+    box-shadow: 0 5px 10px var(--third-color);
+
+}
+
+.general-input{
+    box-sizing: border-box;
+    width: 200px;
+    height: 35px;
+    margin-right:10px;
+    
+
+}
+
+.go-button{
+    margin-right:1rem;  
+    box-sizing: border-box;
+    max-width: 20px;
+    max-height: 40px;
+}
+
+

@@ -5,27 +5,24 @@
                 <img id="logo" src="../../../assets/LogoBleu.png" alt="le logo">
             </div>
             <div>
-                <h1>IT Training</h1>
+                <h1 class="header-title">IT Training</h1>
             </div>
-            <div>
-                <input>
-                <button>GO</button>
+            <div class="nav-button">
+                <input class="general-input">
+                <button class="go-button" mat-fab extended>GO</button>    
             </div>
         </div>
-        <nav>
-            <ul>
-                <a href="#">
-                    <li>
-                        Formations
-                    </li>
-                </a>
-                <a routerLink="formations">
-                    <li>
-                        Recherche
-                    </li>
-                </a>    
-            </ul>
-        </nav>
+
+
+        <mat-toolbar class="nav-buttons" >    
+            <button class="nav-button" mat-raised-button routerLink="home">Accueil</button>
+            <button class="nav-button"  mat-raised-button routerLink="catalogue">Catalogue</button>
+            <button class="nav-button"  mat-raised-button routerLink="formations">Recherche</button>
+            <button class="nav-button"  mat-raised-button routerLink="demande-formation-spe">Demande Personalisée</button> 
+
+        </mat-toolbar>
+        
         
     </header>
+    
 </div>
