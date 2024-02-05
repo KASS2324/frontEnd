@@ -178,7 +178,7 @@
       </div>
 
       <!-- Telephone -->
-      <div  class="form__input-group" formArrayName="telephones">
+      <div  class="form__input-group" id="telephone" formArrayName="telephones">
               @for (telephone of telephones.controls; track telephone; let i = $index) {
               <div>
                 <label class ="form__input-text" for="telephone">Telephone : </label>
@@ -208,9 +208,9 @@
               </div>
             }
   
-              <button type="button" (click)="addTelephone()">+</button>
+              <button class="telephone-button" type="button" (click)="addTelephone()">+</button>
               @if (telephones.length > 1) {
-                <button type="button" (click)="removeTelephone()">-</button>
+                <button class="telephone-button" type="button" (click)="removeTelephone()">-</button>
               }
         </div>
 
