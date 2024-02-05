@@ -1,6 +1,22 @@
 
 
 
+.baniere{
+    background-image :url(../../../assets/background-catalogue.jpg) ;
+    background-size: cover;
+
+}
+
+
+
+
+.titres{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 30px 20px 30px;
+}
 
 
 #titre1{
@@ -15,50 +31,53 @@
 
     }
 #titre2{
+  
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    background-color:var(--second-bg-color) ;
+    border-radius:20px ;
+    width: auto;
+    padding: 20px 30px 20px 30px;
+    margin-top: 20px;
  
 
 }
- .block   {
+ .catalogue-button  {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 200px;
     margin-bottom: 50px;
     word-spacing: 200px;
-    color: #0496ff;
+    
 
   
  }
- div .formule1{
+  .formule1{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 100px;
     margin-bottom: 50px;
     margin-left: 20px;
+    color: black;
+    background-color:var(--second-bg-color) ;
+    width: auto;
+ 
     
  }
 
  div.parent{
     height: 300px;
-    border: solid 5px color(red);
+  
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
-  
-
- 
-
 }
 div.box1{
     width: 300px;
-    height: 200px;
+    height: 150px;
     background-color: var(--second-bg-color) ;
 
 }
@@ -77,29 +96,24 @@ p{
 .parent a{
     text-align: center;
     color : white;
-    background-color : #0496ff;
+
     width: 200px;
     height: 200px;
     border-radius: 5px;
    border: solid;
    padding: 5px;
-
-   
-
 }
-
-
 
 div.box2{
     width: 300px;
-    height: 200px;
+    height: 150px;
     background-color: var(--second-bg-color) ;
 }
 
 
 div.box3{
     width: 300px;
-    height: 200px;
+    height: 150px;
     background-color:  var(--second-bg-color);
 }
 
@@ -112,13 +126,10 @@ div a {
 
 }
 
+.button-individuel1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+     margin-bottom: 100px;
 
-
-
-
-
-
-
-
-
-
+} 
