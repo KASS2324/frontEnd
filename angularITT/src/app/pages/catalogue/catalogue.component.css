@@ -51,19 +51,23 @@
 
   
  }
- div .formule1{
+  .formule1{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 100px;
     margin-bottom: 50px;
     margin-left: 20px;
+    color: black;
+    background-color:var(--second-bg-color) ;
+    width: auto;
+ 
     
  }
 
  div.parent{
     height: 300px;
-    border: solid 1px black;
+  
     display: flex;
     justify-content: space-evenly;
     align-items: center;
