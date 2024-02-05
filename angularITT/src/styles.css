@@ -17,6 +17,9 @@ body {
     --third-color: #13505B;
     --main-bg-color: #040404;
     --second-bg-color: #D7D9CE;
+    --color-error: #ff0000;
+    --color-success: #4bb544;
+    --border-radius: 4px;
 
     font-family: "Montserrat",Roboto, "Helvetica Neue", sans-serif;
     color: var(--main-bg-color);
