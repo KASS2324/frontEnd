@@ -4,7 +4,6 @@
 
 <body class="formulaire-body">
 
-
   <div class="container">
     <h1 class="form__title">Votre Demande </h1>
     <div class="form__message form__message--error"></div>
@@ -208,9 +207,9 @@
               </div>
             }
   
-              <button class="telephone-button" type="button" (click)="addTelephone()">+</button>
+              <button class="btn-add-input"  type="button" (click)="addTelephone()">+</button>
               @if (telephones.length > 1) {
-                <button class="telephone-button" type="button" (click)="removeTelephone()">-</button>
+                <button class="btn-del-input"  type="button" (click)="removeTelephone()">-</button>
               }
         </div>
 
@@ -249,6 +248,10 @@
             </div>
     
       </form>
+    </div>
+
+    <div class = "container">
+      <h1 class="form__title">Contacts </h1>
     </div>
 
     

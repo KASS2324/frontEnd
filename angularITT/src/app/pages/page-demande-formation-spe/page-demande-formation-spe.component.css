@@ -1,9 +1,9 @@
 /* Generalities */
 body {
-    height: 1000px;
+    height: 1300px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-content: space-around;
+    justify-content: space-evenly;
     font-size: 20px;
     background: url(../../../assets/bureau-flou.jpg);
     background-size:cover;
@@ -11,8 +11,9 @@ body {
 
 .container {
     width: 600px;
+    height: 1000px;
     max-width: 600px;
-    margin-top:20%;
+    margin-top:10%;
     margin-bottom:20%;
     padding: 2rem;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
@@ -138,8 +139,20 @@ section.formulaireTitle {
     max-height: 100px;
 }
 
-#telephone{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.btn-add-input,
+.btn-del-input {
+  border: none;
+  padding: 12px 12px;
+  max-width: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.btn-add-input {
+    background-color:var(--first-color);
+    margin-right: 4px;
+  }
+  .btn-del-input {
+    background-color: var(--second-color);
+  }
