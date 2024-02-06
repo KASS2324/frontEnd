@@ -60,7 +60,10 @@
     margin-left: 20px;
     color: black;
     background-color:var(--second-bg-color) ;
-    width: auto;
+    width:200px;
+    border-radius: 20px;
+    padding: 5px 10px 5px 10px;
+
  
     
  }
