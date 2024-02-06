@@ -20,7 +20,7 @@ body {
     border-radius: var(--border-radius);
     transform:translate(-5%,-5%);
     font: 500 1rem 'Quicksand', sans-serif;
-    background: rgba(215, 216, 210, 0.6);
+    background: rgba(0,0,0, 0.6);
 }
 
 section.formulaireTitle {
