@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import DemandeSpe from '../../models/demande-spe.model';
 import { DemandeSpeService } from '../../services/demande-spe.service';
+import DemandeSpeUser from '../../models/demande-spe-user.model';
 
 @Component({
   selector: 'app-page-demande-formation-spe',
@@ -15,6 +16,7 @@ export class PageDemandeFormationSpeComponent {
   //Variable Users
   users: any[]=[];
   demandeSpe!: DemandeSpe;
+  demandeSpeUSer!:DemandeSpeUser;
 
   // On déclare un FormGroup avec une méthode `group()` lié au formBuilder
   userForm: FormGroup = this.formBuilder.group({

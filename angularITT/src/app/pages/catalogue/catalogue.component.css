@@ -1,19 +1,6 @@
-.baniere{
-    background-image :url(../../../assets/background-catalogue.jpg) ;
-    background-size: cover;
-
-}
 
 
 
-
-.titres{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 20px 30px 20px 30px;
-}
 
 
 #titre1{
@@ -58,13 +45,6 @@
     margin-top: 100px;
     margin-bottom: 50px;
     margin-left: 20px;
-    color: black;
-    background-color:var(--second-bg-color) ;
-    width:200px;
-    border-radius: 20px;
-    padding: 5px 10px 5px 10px;
-
- 
     
  }
 
@@ -134,13 +114,10 @@ div a {
 
 } 
 
+.button-individuel1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+     margin-bottom: 100px;
 
-
-
-
-
-
-
-
-
-
+} 
