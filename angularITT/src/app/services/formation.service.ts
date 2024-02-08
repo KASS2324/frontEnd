@@ -39,4 +39,7 @@ export class FormationService {
   getFormationsByThemeAndVille(theme: string, ville: string): Observable<Formation[]> {
     return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations/byThemeAndVille?theme=${theme}&ville=${ville}`);
   }
+  getThemesFormations(): Observable<String[]> {
+    return  this.httpClient.get<String[]>(`${this.apiUrl}/formations/themes`);
+  }
 }
