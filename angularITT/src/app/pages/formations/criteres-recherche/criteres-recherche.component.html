@@ -7,7 +7,7 @@
                 <select name="theme" id="theme" formControlName="theme">
                     <option value="Tous">Tous</option>
                     @for (theme of themes; track theme) {
-                        <option [value]="theme.intitule">{{ theme.intitule }}</option>
+                        <option [value]="theme">{{ theme }}</option>
                     }
                 </select>
             </div>
