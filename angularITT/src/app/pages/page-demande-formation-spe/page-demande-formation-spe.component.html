@@ -177,41 +177,22 @@
       </div>
 
       <!-- Telephone -->
-      <div  class="form__input-group" id="telephone" formArrayName="telephones">
-              @for (telephone of telephones.controls; track telephone; let i = $index) {
-              <div>
-                <label class ="form__input-text" for="telephone">Telephone : </label>
-                <div class="form__input-error-message"></div>
-                <input
-                  type="tel"
-                  class="form__input" 
-                  id="telephone"
-                  [formControlName]="i"
-                  placeholder="Telephone"
-                />
-  
-                @if (submitted && telephone.invalid) {
-                <span>
-                  @if (telephone.hasError('minlength')) {
-                  <span>
-                    * Telephone doit contenir au moins 10 chiffres
-                  </span>
-                }
-                  @if (!telephone.value) {
-                  <span>
-                    * Téléphone obligatoire
-                  </span>
-                }
-                </span>
-              }
-              </div>
-            }
-  
-              <button class="btn-add-input"  type="button" (click)="addTelephone()">+</button>
-              @if (telephones.length > 1) {
-                <button class="btn-del-input"  type="button" (click)="removeTelephone()">-</button>
-              }
+      <div  class="form__input-group" id="telephone">
+              
+        <div>
+          <label class ="form__input-text" for="telephone">Telephone : </label>
+          <div class="form__input-error-message"></div>
+          <input
+            type="tel"
+            class="form__input" 
+            id="telephone"
+            formControlName="telephones"
+            placeholder="Telephone"
+          />
+
         </div>
+  
+      </div>
 
         <!-- Demande de Formation Spécialisée -->
       <div class="form__input-group">
