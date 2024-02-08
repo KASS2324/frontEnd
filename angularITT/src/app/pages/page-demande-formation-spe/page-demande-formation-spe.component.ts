@@ -25,9 +25,7 @@ export class PageDemandeFormationSpeComponent {
     email: ['', [Validators.email, Validators.required ]],
     // On déclare ici un tableau de FormArray
     // Dans lequel on ajoute un contrôle pour un téléphone
-    telephones: this.formBuilder.array([
-      this.formBuilder.control('', [Validators.minLength(10), Validators.required]),
-    ]),
+    telephones: [''],
     entreprise: [''],
     typeFormation:['',],
     demande: ['', [Validators.minLength(2), Validators.required]],
@@ -42,7 +40,21 @@ export class PageDemandeFormationSpeComponent {
 
   private addUser(): void {
     this.users.push(this.userForm.value);
-    this.demandeSpeService.createDemandeSpe(this.userForm.value).subscribe((userForm) => {this.demandeSpe = userForm});
+
+    // test 
+    this.demandeSpe = new DemandeSpe(
+      this.userForm.value.typeFormation,
+      this.userForm.value.demande,
+      new DemandeSpeUser(
+        this.userForm.value.nom,
+        this.userForm.value.prenom,
+        this.userForm.value.email,
+        this.userForm.value.telephones,
+        this.userForm.value.entreprise
+      )
+    )
+
+    this.demandeSpeService.createDemandeSpe(this.demandeSpe).subscribe((userForm) => {this.demandeSpe = userForm});
     this.userForm.reset();
     this.submitted = false;
   }
@@ -58,21 +70,7 @@ export class PageDemandeFormationSpeComponent {
     return this.userForm.controls;
   }
 
-// Getter pour accéder à la liste des téléphones
-  public get telephones(): FormArray {
-    return this.userForm.get('telephones') as FormArray;
-  }
-  // Méthode pour ajouter un contrôle de téléphone
-  // La méthode va push un contrôle de téléphone dans le tableau 'téléphones'
-  public addTelephone(): void {
-    this.telephones.push(this.formBuilder.control('', [Validators.minLength(10), Validators.required]));
-  }
-  // Méthode pour supprimer un contrôle de téléphone
-  // On retire le dernier élément de l'index
-  // NB : le compte commence à 1, l'index commence à 0
-  public removeTelephone(): void {
-    this.telephones.removeAt(this.telephones.length - 1);
-  }
+
 
   //Property Checked
   
