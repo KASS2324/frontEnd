@@ -1,230 +1,381 @@
 <div class="backgroundAdmin">
-
-    <div class="container">
-        <h1 class="form__title">Formulaire pour ajouter une formation</h1>
-        <div class="form__message form__message--error"></div>
-    
-        <form class="form form--hidden" [formGroup]="userForm" (ngSubmit)="onSubmit()">
-          <!-- Nom -->
-          <div class="form__input-group">
-            
-            <label class ="form__input-text" for="nom">Nom : </label>
-            <div class="form__input-error-message"></div>
-            <input
-              type="text"
-              class="form__input"
-              id="nom"
-              formControlName="nom"
-              placeholder="Nom"
-            />
+  <div class="containerCategorie">
+    <div class="form__title">
+      <h1 class="">Création catégorie, thème, sous-thème</h1>
+    </div>
       
-            @if (submitted && form['nom'].invalid) {
+      <div class="form__message form__message--error"></div>
+  
+      <form class="form form--hidden" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+        <div class="form__input-group">
+          <label class ="form__input-text" for="prenom">Crée une catégorie : </label>
+          <div class="form__input-error-message"></div>
+          <input type="text" class="form__input" id="Catégorie" formControlName="Catégorie" placeholder="Catégorie"/>
+          @if (submitted && form['Catégorie'].invalid) {
+            <span>
+              @if (form['Catégorie'].hasError('minlength')) {
+              <span>
+                * Le nom catégorie doit contenir au minimum 2 caractères
+              </span>
+              }
+              @if (!form['Catégorie'].value) {
+              <span>
+                * Catégorie obligatoire
+              </span>
+              }
+            </span>
+          }
+        </div>
+
+        <div class="form__input-group">
+          <label class ="form__input-text" for="prenom">Crée un thème : </label>
+          <div class="form__input-error-message"></div>
+          <input type="text" class="form__input" id="theme" formControlName="theme" placeholder="Thème"/>
+          @if (submitted && form['theme'].invalid) {
+            <span>
+              @if (form['theme'].hasError('minlength')) {
+                <span>
+                  * Prénom doit contenir au minimum 2 caractères
+                </span>
+              }
+              @if (!form['theme'].value) {
+                <span>
+                  * Prénom obligatoire
+                </span>
+              }
+            </span>
+          }
+        </div>
+
+        <div class="form__input-group">
+          <label class ="form__input-text" for="prenom">Crée un sous-thème  : </label>
+          <div class="form__input-error-message"></div>
+          <input type="text" class="form__input" id="sous-theme" formControlName="sous-theme" placeholder="Sous-Thème"/>
+          @if (submitted && form['sous-theme'].invalid) {
+            <span>
+              @if (form['sous-theme'].hasError('minlength')) {
+              <span>
+                * Prénom doit contenir au minimum 2 caractères
+              </span>
+              }
+              @if (!form['sous-theme'].value) {
+              <span>
+                * Prénom obligatoire
+              </span>
+              }
+            </span>
+          }
+        </div>
+
+        <p>Les champs avec une * sont oblifatoires</p>
+
+        <div>
+          <button class="form__button" type="submit">Enregistrer</button>
+        </div>
+
+      </form>
+  </div>
+
+  <div class="containerCreation">
+    <div class="form__title">
+      <h1 class="">Création d'une formation</h1>
+    </div>
+      
+      <div class="form__message form__message--error"></div>
+  
+      <form class="form form--hidden" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+        <div class="form__input-group">
+          <label class ="form__input-text" for="nom">Titre de la foramtion * : </label>
+          <div class="form__input-error-message"></div>
+          <input type="text" class="form__input" id="nom" formControlName="nom" placeholder="Titre"/>
+          @if (submitted && form['nom'].invalid) {
             <span>
               @if (form['nom'].hasError('minlength')) {
-                 <span>
-                  * Nom doit contenir au minimum 2 caractères
+                <span>
+                  * Le titre doit contenir au minimum 2 caractères
                 </span>
               }
               @if (!form['nom'].value) {
                 <span>
                   * Nom obligatoire
                 </span>
-               }
-            </span>
-           }
-          </div>
-    
-    
-          <!-- Prenom -->
-          <div class="form__input-group">
-            <label class ="form__input-text" for="prenom">Prenom : </label>
-            <div class="form__input-error-message"></div>
-            <input
-              type="text"
-              class="form__input" 
-              id="prenom"
-              formControlName="prenom"
-              placeholder="Prenom"
-            />
-            @if (submitted && form['prenom'].invalid) {
-            <span>
-              @if (form['prenom'].hasError('minlength')) {
-              <span>
-                * Prénom doit contenir au minimum 2 caractères
-              </span>
-            }
-              @if (!form['prenom'].value) {
-              <span>
-                * Prénom obligatoire
-              </span>
-            }
+              }
             </span>
           }
-          </div>
-    
-          <!-- Type de Formation -->
-          <div class="form__input-group">
-            <label class ="form__input-text" for="typeFormation">Type de Formation : </label>
-            <div class="form__input-error-message"></div>
-            <div>
-              <input
-              type="radio"
-              class="form__input" 
-              id="interEntreprise"
-              formControlName="typeFormation"
-              value="interEntreprise"
-              name="typeFormation" />
-    
-              <label class ="form__input-text" for="interEntreprise">Inter-Entreprise</label>
-            </div>
-    
-            <div>
-              <div class="form__input-error-message"></div>
-              <input
-              type="radio"
-              class="form__input" 
-              id="intraEntreprise"
-              formControlName="typeFormation"
-              value="intraEntreprise"
-              
-              name="typeFormation" />
-    
-              <label class ="form__input-text" for="intraEntreprise">Intra-Entreprise</label>
-            </div>
-    
-            <div>
-              <div class="form__input-error-message"></div>
-              <input
-              type="radio"
-              class="form__input" 
-              id="autre"
-              formControlName="typeFormation"
-              value="autre"
-              
-              name="typeFormation" />
-    
-              <label class ="form__input-text" for="autre">Autre</label>
-            </div>
-            
-            @if (submitted && form['typeFormation'].invalid) {
-            <span>
-              @if (!form['typeFormation'].value) {
-              <span>
-                * Champ obligatoire
-              </span>
-            }
-            </span>
-          }
-          </div>
-    
-    
-          <!-- Nom de l'Entreprise -->
-          <div class="form__input-group">
-            <label class ="form__input-text" for="entreprise">Nom de l'Entreprise : </label>
-            <div class="form__input-error-message"></div>
-            <input
-              type="text"
-              class="form__input" 
-              id="entreprise"
-              formControlName="entreprise"
-              placeholder="Entreprise"
-            />
-            @if (submitted && form['entreprise'].invalid) {
-            <span>
-              @if (form['entreprise'].hasError('minlength')) {
-              <span>
-                * Entreprise doit contenir au minimum 2 caractères
-              </span>
-             }
-              @if (!form['entreprise'].value) {
-              <span>
-                * Entreprise obligatoire
-              </span>
-             }
-            </span>
-           }
-          </div>
-    
-          <!-- Email -->
-          <div class="form__input-group">
-            <label class ="form__input-text" for="email">Email : </label>
-            <div class="form__input-error-message"></div>
-            <input
-              type="email"
-              class="form__input" 
-              id="email"
-              formControlName="email"
-              placeholder="Email"
-            />
-            @if (submitted && form['email'].invalid) {
-            <span>
-              @if (form['email'].hasError('email')) {
-              <span>
-                * Email invalide
-              </span>
-             }
-              @if (!form['email'].value) {
-              <span>
-                * Email obligatoire
-              </span>
-             }
-            </span>
-          }
-          </div>
-    
-          <!-- Telephone -->
-          <div  class="form__input-group" id="telephone">
-                  
-            <div>
-              <label class ="form__input-text" for="telephone">Telephone : </label>
-              <div class="form__input-error-message"></div>
-              <input
-                type="tel"
-                class="form__input" 
-                id="telephone"
-                formControlName="telephones"
-                placeholder="Telephone"
-              />
-    
-            </div>
-      
-          </div>
-    
-            <!-- Demande de Formation Spécialisée -->
-          <div class="form__input-group">
-            <label class ="form__input-text" for="demande">Demande de Formation Spécialisée : </label>
-            <div class="form__input-error-message"></div>
-            <textarea
-              class="form__input" 
-              id="demande"
-              formControlName="demande"
-              placeholder="Demande"
-            >
-            
-            </textarea>
-              
-            
-            @if (submitted && form['demande'].invalid) {
-            <span>
-              @if (form['demande'].hasError('minlength')) {
-              <span>
-                * La Demande doit contenir au minimum 2 caractères
-              </span>
-             }
-              @if (!form['demande'].value) {
-              <span>
-                * Demande obligatoire
-              </span>
-             }
-            </span>
-           }
-          </div>
-          <!-- Button Submit -->
-                <div>
-                  <button class="form__button" type="submit">Envoyer</button>
-                </div>
-        
-          </form>
-      </div>
+        </div>
 
+        <h2>Catégorie *</h2>
+        <div>
+          <div>
+            <label for="theme">Choisir une catégorie existante : </label>
+          </div>
+          <div>
+            <select name="categorie" class="form__input" id="categorie" formControlName="categorie">
+              <option value="Tous">Tous</option>
+              @for (categorie of categories; track categorie) {
+                  <option [value]="categorie">{{ categorie }}</option>
+              }
+            </select>
+          </div>
+        </div>
+        
+        <h2>Thème</h2>
+        <div>
+          <div>
+            <label for="theme">Choisir un Thème existant : </label>
+          </div>
+          <div>
+            <select name="theme" id="theme" formControlName="theme">
+              <option value="Tous">Tous</option>
+              @for (theme of themes; track theme) {
+                  <option [value]="theme">{{ theme }}</option>
+              }
+            </select>
+          </div>
+        </div>
+
+        <h2>Sous-Thème</h2>
+        <div>
+          <div>
+            <label for="sousTheme">Choisir un sous-thème existant : </label>
+          </div>
+          <div>
+            <select name="sousTheme" id="sousTheme" formControlName="sousTheme">
+              <option value="Tous">Tous</option>
+              @for (sousTheme of sousThemes; track sousTheme) {
+                  <option [value]="sousTheme">{{ sousTheme }}</option>
+              }
+            </select>
+          </div>
+        </div>
+
+        <div  class="form__input-group" id="prix">
+          <div>
+            <label class ="form__input-text" for="prix">Montant * : </label>
+            <div class="form__input-error-message"></div>
+            <input type="prix" class="form__input" id="prix" formControlName="prix" placeholder="0€"/>
+          </div>
+        </div>
+
+        <div class="form__input-group">
+          <label class ="form__input-text" for="dureeHeure">Durée en heures * : </label>
+          <div class="form__input-error-message"></div>
+          <input class="form__input" id="dureeHeure" formControlName="dureeHeure" placeholder="0H"/>
+          @if (submitted && form['dureeHeure'].invalid) {
+            <span>
+              @if (form['dureeHeure'].hasError('minlength')) {
+              <span>
+                * La durée doit contenir au minimum 1H
+              </span>
+              }
+              @if (!form['dureeHeure'].value) {
+              <span>
+                * Durée obligatoire
+              </span>
+              }
+            </span>
+          }
+        </div>
+
+        <div class="form__input-group">
+          <label class ="form__input-text" for="ville" >Ville * : </label>
+          <div class="form__input-error-message"></div>
+          <input class="form__input" id="ville" formControlName="ville" placeholder="Ville"/>
+          @if (submitted && form['ville'].invalid) {
+            <span>
+              @if (form['ville'].hasError('minlength')) {
+              <span>
+                * Le nom doit contenir au minimum 2 caractères
+              </span>
+              }
+              @if (!form['ville'].value) {
+              <span>
+                * Ville obligatoire
+              </span>
+              }
+            </span>
+          }
+        </div>
+
+        <div class="form__input-group">
+          <label class ="form__input-text" for="description">Description de la formation * : </label>
+          <div class="form__input-error-message"></div>
+          <textarea class="form__input" id="description" formControlName="description" placeholder="Description ..."></textarea>
+          @if (submitted && form['description'].invalid) {
+            <span>
+              @if (form['description'].hasError('minlength')) {
+              <span>
+                * La description doit contenir au minimum 100 caractères
+              </span>
+              }
+              @if (!form['description'].value) {
+              <span>
+                * Description obligatoire
+              </span>
+              }
+            </span>
+          }
+        </div>
+
+        <p>Les champs avec une * sont oblifatoires</p>
+
+        <div>
+          <button class="form__button" type="submit">Enregistrer la création</button>
+        </div>
+
+      </form>
+  </div>
+
+  <div class="containerModification">
+    <div class="form__title">
+      <h1 class="">Modification d'une formation</h1>
+    </div>
+      
+      <div class="form__message form__message--error"></div>
+  
+      <form class="form form--hidden" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+        <div class="form__input-group">
+          <label class ="form__input-text" for="nom">Titre de la foramtion * : </label>
+          <div class="form__input-error-message"></div>
+          <input type="text" class="form__input" id="nom" formControlName="nom" placeholder="Titre"/>
+          @if (submitted && form['nom'].invalid) {
+            <span>
+              @if (form['nom'].hasError('minlength')) {
+                <span>
+                  * Le titre doit contenir au minimum 2 caractères
+                </span>
+              }
+              @if (!form['nom'].value) {
+                <span>
+                  * Nom obligatoire
+                </span>
+              }
+            </span>
+          }
+        </div>
+
+        <h2>Catégorie *</h2>
+        <div>
+          <div>
+            <label for="theme">Choisir une catégorie existante : </label>
+          </div>
+          <div>
+            <select name="categorie" class="form__input" id="categorie" formControlName="categorie">
+              <option value="Tous">Tous</option>
+              @for (categorie of categories; track categorie) {
+                  <option [value]="categorie">{{ categorie }}</option>
+              }
+            </select>
+          </div>
+        </div>
+        
+        <h2>Thème</h2>
+        <div>
+          <div>
+            <label for="theme">Choisir un Thème existant : </label>
+          </div>
+          <div>
+            <select name="theme" id="theme" formControlName="theme">
+              <option value="Tous">Tous</option>
+              @for (theme of themes; track theme) {
+                  <option [value]="theme">{{ theme }}</option>
+              }
+            </select>
+          </div>
+        </div>
+
+        <h2>Sous-Thème</h2>
+        <div>
+          <div>
+            <label for="sousTheme">Choisir un sous-thème existant : </label>
+          </div>
+          <div>
+            <select name="sousTheme" id="sousTheme" formControlName="sousTheme">
+              <option value="Tous">Tous</option>
+              @for (sousTheme of sousThemes; track sousTheme) {
+                  <option [value]="sousTheme">{{ sousTheme }}</option>
+              }
+            </select>
+          </div>
+        </div>
+
+        <div  class="form__input-group" id="prix">
+          <div>
+            <label class ="form__input-text" for="prix">Montant * : </label>
+            <div class="form__input-error-message"></div>
+            <input type="prix" class="form__input" id="prix" formControlName="prix" placeholder="0€"/>
+          </div>
+        </div>
+
+        <div class="form__input-group">
+          <label class ="form__input-text" for="dureeHeure">Durée en heures * : </label>
+          <div class="form__input-error-message"></div>
+          <input class="form__input" id="dureeHeure" formControlName="dureeHeure" placeholder="0H"/>
+          @if (submitted && form['dureeHeure'].invalid) {
+            <span>
+              @if (form['dureeHeure'].hasError('minlength')) {
+              <span>
+                * La durée doit contenir au minimum 1H
+              </span>
+              }
+              @if (!form['dureeHeure'].value) {
+              <span>
+                * Durée obligatoire
+              </span>
+              }
+            </span>
+          }
+        </div>
+
+        <div class="form__input-group">
+          <label class ="form__input-text" for="ville" >Ville * : </label>
+          <div class="form__input-error-message"></div>
+          <input class="form__input" id="ville" formControlName="ville" placeholder="Ville"/>
+          @if (submitted && form['ville'].invalid) {
+            <span>
+              @if (form['ville'].hasError('minlength')) {
+              <span>
+                * Le nom doit contenir au minimum 2 caractères
+              </span>
+              }
+              @if (!form['ville'].value) {
+              <span>
+                * Ville obligatoire
+              </span>
+              }
+            </span>
+          }
+        </div>
+
+        <div class="form__input-group">
+          <label class ="form__input-text" for="description">Description de la formation * : </label>
+          <div class="form__input-error-message"></div>
+          <textarea class="form__input" id="description" formControlName="description" placeholder="Description ..."></textarea>
+          @if (submitted && form['description'].invalid) {
+            <span>
+              @if (form['description'].hasError('minlength')) {
+              <span>
+                * La description doit contenir au minimum 100 caractères
+              </span>
+              }
+              @if (!form['description'].value) {
+              <span>
+                * Description obligatoire
+              </span>
+              }
+            </span>
+          }
+        </div>
+
+        <p>Les champs avec une * sont oblifatoires</p>
+
+        <div>
+          <button class="form__button" type="submit">Enregistrer les modifications</button>
+        </div>
+
+      </form>
+  </div>  
 </div>

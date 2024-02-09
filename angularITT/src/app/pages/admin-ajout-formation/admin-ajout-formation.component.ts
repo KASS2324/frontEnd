@@ -24,10 +24,15 @@ export class AdminAjoutFormationComponent {
     // Dans lequel on ajoute un contrôle pour un téléphone
     telephones: [''],
     entreprise: [''],
+    theme: [''],
     typeFormation:['',],
-    demande: ['', [Validators.minLength(2), Validators.required]],
+    demande: ['', [Validators.minLength(100), Validators.required]],
 
   });
+  categories: String[] = [];
+  themes: String[] = [];
+  sousThemes: String[] = [];
+  
 
   // Ajout d'un booléen pour vérifier si le formulaire est soumis
   submitted: boolean = false;

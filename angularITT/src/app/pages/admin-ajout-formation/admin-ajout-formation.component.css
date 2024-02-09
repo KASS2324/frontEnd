@@ -1,22 +1,81 @@
 .backgroundAdmin{
     background: url(../../../assets/fond-bureau-flou.png);
     background-size: cover;
-    padding: 90px;
+    padding: 40px;
     height: 1000px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around
+    
 }
-.container {
-    width: 600px;
-    height: 1000px;
+.containerCategorie {
+    width: 500px;
+    height: 400px;
     max-width: 600px;
-    /*margin-top:10%;*/
-    /*margin-bottom:20%;*/
     padding: 2rem;
     box-shadow: 0 0 40px rgba(215, 216, 210, 0.2);
     border-radius: var(--border-radius);
-    transform:translate(-5%,-5%);
     font: 500 1rem 'Quicksand', sans-serif;
     background: rgba(0,0,0, 0.6);
     color: var(--second-bg-color);
+}
+.containerCreation {
+    width: 500px;
+    height: 800px;
+    max-width: 600px;
+    padding: 2rem;
+    box-shadow: 0 0 40px rgba(215, 216, 210, 0.2);
+    border-radius: var(--border-radius);
+    font: 500 1rem 'Quicksand', sans-serif;
+    background: rgba(0,0,0, 0.6);
+    color: var(--second-bg-color);
+}
+.containerModification {
+    width: 500px;
+    height: 800px;
+    max-width: 600px;
+    padding: 2rem;
+    box-shadow: 0 0 40px rgba(215, 216, 210, 0.2);
+    border-radius: var(--border-radius);
+    font: 500 1rem 'Quicksand', sans-serif;
+    background: rgba(0,0,0, 0.6);
+    color: var(--second-bg-color);
+}
+h1{
+    margin-bottom: 0;
+    padding: 9px;
+}
+h2{
+    margin-top: 16px;
+    margin-bottom: 0px;
+}
+.form__title {
+    margin-bottom: 2rem;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--main-bg-color);
+    border-radius: var(--border-radius);
+    text-shadow: var(--main-bg-color);
+    color: #eeeeee;
+}
+.form__input {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    padding: 0.45rem;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    border: 1px solid #dddddd;
+    outline: none;
+    background: #eeeeee;
+}
+.form__input-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    column-gap: 20px;
+}
+.form__input-text{
+    text-align: left;
+    color: #eeeeee;
 }
