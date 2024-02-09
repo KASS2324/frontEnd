@@ -1,9 +1,9 @@
 .headerContainer {
-    height: 146px;
+    height: 90px;
     
 }
 header {
-    background-color: var(--second-bg-color);
+    background-color: var(--second-bg-color);   
     padding: 1rem;
     width: 100%;
     z-index:2;
@@ -38,17 +38,10 @@ header {
     display: flex;
     align-content: center;
     justify-content: center;
-    background-color: var(--second-bg-color);
+    background-color: var(--second-bg-color); 
    
 }
 
-/* .nav-buttons ::backdrop{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    background-color: var(--second-bg-color);
-
-} */
 
 .nav-button{
     margin-right:1rem;   

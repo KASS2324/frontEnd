@@ -1,10 +1,26 @@
-body.formulaire-body{
+/* Generalities */
+body {
+    height: 1300px;
     display: flex;
-    height:100vh;
-    justify-content: center;
-    align-items: center;
-    background: url(../../../assets/fond-bureau.jpg);
-    background-size: cover;
+    align-content: space-around;
+    justify-content: space-evenly;
+    font-size: 20px;
+    background: url(../../../assets/bureau-flou.jpg);
+    background-size:cover;
+}
+
+.container {
+    width: 600px;
+    height: 1000px;
+    max-width: 600px;
+    margin-top:10%;
+    margin-bottom:20%;
+    padding: 2rem;
+    box-shadow: 0 0 40px rgba(215, 216, 210, 0.2);
+    border-radius: var(--border-radius);
+    transform:translate(-5%,-5%);
+    font: 500 1rem 'Quicksand', sans-serif;
+    background: rgba(0,0,0, 0.6);
 }
 
 section.formulaireTitle {
@@ -16,31 +32,127 @@ section.formulaireTitle {
     width: 100%;
     padding-left: 2rem;
 }
-.container{
-    
-    background-color: var(--second-bg-color);
-    opacity: 0.5;
-    max-width: 900px;
-    width:100%;
-    border-radius: 6px;
-    margin:10%;
-    box-shadow: 0 5px 10px var(--third-color);
+
+.form__input,
+.form__button {
+    font: 500 1rem 'Quicksand', sans-serif;
+}
+
+.form__title {
+    margin-bottom: 2rem;
+    text-align: center;
+    background-color: var(--main-bg-color);
+    color: var(--second-bg-color);
+    text-shadow: var(--main-bg-color);
+}
+
+/* Control messages */
+.form__message {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.form__message--success {
+    color: var(--color-success);
+}
+.form__message--error {
+    color: var(--color-error);
+}
+
+/* Input format */
+.form__input-group {
+    margin-bottom: 1rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    
+    flex-direction: column;
+    column-gap: 20px;
+}
+
+.form__input {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    border: 1px solid #dddddd;
+    outline: none;
+    background: #eeeeee;
+    transition: border-color 0.2s;
+   
+}
+
+.form__input:focus {
+    border-color: var(--first-color);
+    background: #ffffff;
+}
+.form__input--error {
+    color: var(--color-error);
+    border-color: var(--color-error);
+}
+.form__input-error-message {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-error);
+}
+
+/* Button options */
+.form__button {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background: var(--first-color);
+}
+.form__button:hover {
+    background: var(--third-color);
+}
+.form__button:active {
+    transform: scale(0.98);
+}
+.form__text {
+    text-align: center;
+}
+.form__link {
+    color: var(--second-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+.form__link:hover {
+    text-decoration: underline;
+}
+
+/* Form text options */
+.form__input-text{
+    text-align: center;
+    color: #fff;
 
 }
 
-.container form{
-    
-    margin-top: 16px;
-    min-height: 490px;
-    background-color: var(--second-bg-color) ;
-    opacity: 1;
-
+/* Telephone spécificités */
+.telephone-button{
+    border-radius: 100%;
+    max-width: 100px;
+    max-height: 100px;
 }
 
-.input text{
-    opacity: 1;
+.btn-add-input,
+.btn-del-input {
+  border: none;
+  padding: 12px 12px;
+  max-width: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.btn-add-input {
+    background-color:var(--first-color);
+    margin-right: 4px;
+  }
+  .btn-del-input {
+    background-color: var(--second-color);
+  }

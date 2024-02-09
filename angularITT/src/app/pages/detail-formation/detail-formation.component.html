@@ -1,0 +1,26 @@
+
+ 
+<section class="formation">
+
+    <section class="formation-title">
+
+        <h2>{{formation.nom}} </h2>
+    
+    </section>
+
+    <section class="detail-formation">
+
+        <p>{{formation.description}}</p>
+
+    </section>
+
+</section>
+
+<section class="sessions">
+    @for (session of sessions; track session) {
+        <p>Début : {{session.dateStartSession}}</p>
+        <p>Fin : {{session.dateEndSession}}</p>
+    }
+
+</section>
+

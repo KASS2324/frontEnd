@@ -17,7 +17,7 @@ export class FormationService {
   }
 
   getFormation(id: number): Observable<Formation> {
-    return this.httpClient.get<Formation>(`${this.apiUrl}/formations/${id}`);
+    return this.httpClient.get<Formation>(`${this.apiUrl}/formations/find/${id}`);
   }
 
   createFormation(formation: Formation): Observable<Formation> {
@@ -29,14 +29,17 @@ export class FormationService {
   }
 
   getFormationsByVille(ville: string): Observable<Formation[]> {
-    return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations?ville=${ville}`);
+    return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations/byVille?ville=${ville}`);
   }
 
   getFormationsByTheme(theme: string): Observable<Formation[]> {
-    return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations?theme=${theme}`);
+    return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations/byTheme?theme=${theme}`);
   }
 
   getFormationsByThemeAndVille(theme: string, ville: string): Observable<Formation[]> {
-    return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations?theme=${theme}&ville=${ville}`);
+    return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations/byThemeAndVille?theme=${theme}&ville=${ville}`);
+  }
+  getThemesFormations(): Observable<String[]> {
+    return  this.httpClient.get<String[]>(`${this.apiUrl}/formations/themes`);
   }
 }

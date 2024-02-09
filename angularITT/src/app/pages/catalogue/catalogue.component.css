@@ -1,0 +1,135 @@
+
+
+
+.baniere{
+    background-image :url(../../../assets/background-catalogue.jpg) ;
+    background-size: cover;
+
+}
+
+
+
+
+.titres{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 30px 20px 30px;
+}
+
+
+#titre1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+     margin-top:50px;
+    margin-bottom: 50px;
+  
+ 
+
+    }
+#titre2{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--second-bg-color) ;
+    border-radius:20px ;
+    width: auto;
+    padding: 20px 30px 20px 30px;
+    margin-top: 20px;
+ 
+
+}
+ .catalogue-button  {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 200px;
+    margin-bottom: 50px;
+    word-spacing: 200px;
+    
+
+  
+ }
+  .formule1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    color: black;
+    background-color:var(--second-bg-color) ;
+    width: auto;
+ 
+    
+ }
+
+ div.parent{
+    height: 300px;
+  
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+div.box1{
+    width: 300px;
+    height: 150px;
+    background-color: var(--second-bg-color) ;
+
+}
+
+.parent h3{
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+p{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.parent a{
+    text-align: center;
+    color : white;
+
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+   border: solid;
+   padding: 5px;
+}
+
+div.box2{
+    width: 300px;
+    height: 150px;
+    background-color: var(--second-bg-color) ;
+}
+
+
+div.box3{
+    width: 300px;
+    height: 150px;
+    background-color:  var(--second-bg-color);
+}
+
+#rh{
+    word-spacing :4px;
+}
+div a {
+    font-weight: bold;
+    color: black;
+
+}
+
+.button-individuel1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+     margin-bottom: 100px;
+
+} 
