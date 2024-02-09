@@ -1,135 +1,154 @@
+.baniere {
+  background-image: url(../../../assets/background-catalogue.jpg);
+  background-size: cover;
+  height: 1000px;
+}
 
+.titres {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
-
-.baniere{
-    background-image :url(../../../assets/background-catalogue.jpg) ;
-    background-size: cover;
+#titre2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--second-bg-color);
+  border-radius: 10px;
+  width: auto;
+  padding: 10px 20px 10px 20px;
+  margin-top: 30px;
 
 }
 
-
-
-
-.titres{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 20px 30px 20px 30px;
+.formule1 {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  color: black;
+  width: auto;
+  color: white;
 }
 
+div.parent {
+  height: 300px;
 
-#titre1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-     margin-top:50px;
-    margin-bottom: 50px;
-  
- 
-
-    }
-#titre2{
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:var(--second-bg-color) ;
-    border-radius:20px ;
-    width: auto;
-    padding: 20px 30px 20px 30px;
-    margin-top: 20px;
- 
-
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 50px;
 }
- .catalogue-button  {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 200px;
-    margin-bottom: 50px;
-    word-spacing: 200px;
-    
-
-  
- }
-  .formule1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-    margin-bottom: 50px;
-    margin-left: 20px;
-    color: black;
-    background-color:var(--second-bg-color) ;
-    width: auto;
- 
-    
- }
-
- div.parent{
-    height: 300px;
-  
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-div.box1{
-    width: 300px;
-    height: 150px;
-    background-color: var(--second-bg-color) ;
-
+div.box1 {
+  width: 300px;
+  height: 150px;
+  background-color: var(--second-bg-color);
 }
 
-.parent h3{
-    text-align: center;
-    margin-top: 10px;
-    font-weight: bold;
+.parent h3 {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
-p{
-    text-align: center;
-    margin-bottom: 10px;
+p {
+  text-align: center;
+  margin-bottom: 10px;
 }
 
-.parent a{
-    text-align: center;
-    color : white;
+.parent a {
+  text-align: center;
+  color: white;
 
-    width: 200px;
-    height: 200px;
-    border-radius: 5px;
-   border: solid;
-   padding: 5px;
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  border: solid;
+  padding: 5px;
 }
 
-div.box2{
-    width: 300px;
-    height: 150px;
-    background-color: var(--second-bg-color) ;
+div.box2 {
+  width: 300px;
+  height: 150px;
+  background-color: var(--second-bg-color);
 }
 
-
-div.box3{
-    width: 300px;
-    height: 150px;
-    background-color:  var(--second-bg-color);
+div.box3 {
+  width: 300px;
+  height: 150px;
+  background-color: var(--second-bg-color);
 }
 
-#rh{
-    word-spacing :4px;
+#rh {
+  word-spacing: 4px;
 }
 div a {
-    font-weight: bold;
-    color: black;
+  font-weight: bold;
+  color: black;
+}
+
+.individuel {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+ margin-top: 200px
+}
+
+.dropdownmenu ul ul {
+  display: none;
+  position: absolute;
+}
+
+.dropdownmenu ul li:hover > ul {
+  display: block;
+}
+.dropdownmenu ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+.dropdownmenu {
+  list-style: none;
+  width: auto;
+  margin-top: 5px;
+  margin-bottom: 12rem;
+}
+
+.dropdownmenu a {
+  background-color: var(--mdc-protected-button-container-color);
+  color: white;
+  display: block;
+  font-weight: bold;
+  font: 14px Roboto, sans-serif;
+ padding: 14px 50px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  border-radius: var(--border-radius);
+}
+
+ 
+
+.dropdownmenu ul ul li:hover > a {
+  background-color: var(--first-color);
+}
+
+#submenu1 a {
+  font-size: smaller;
 
 }
 
-.button-individuel1{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-     margin-bottom: 100px;
+/**article {
+  background-color: rgba(0, 0, 0, 0.6);
 
-} 
+}**/
+
+.submenu{
+    padding : 0 ;
+}
+
+

@@ -14,7 +14,7 @@ import { ResultatsRechercheComponent } from "./resultats-recherche/resultats-rec
 })
 export class FormationsComponent {
 
-  formations: Formation[] = [];
+  formations : Formation[] = [];
 
   constructor(private formationService: FormationService){}
 
