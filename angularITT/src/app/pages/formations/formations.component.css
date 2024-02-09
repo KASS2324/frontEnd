@@ -1,4 +1,4 @@
-body.formation{
+.formation{
     background: url(../../../assets/fond-bureau.jpg);
     background-size: cover;
 }
@@ -15,4 +15,6 @@ section.rechercheTitle {
 
 section.rechercheEtResultats {
     display: flex;
+    background-color: rgb(255 255 255 / 30%);
+    backdrop-filter: blur(10px);
 }

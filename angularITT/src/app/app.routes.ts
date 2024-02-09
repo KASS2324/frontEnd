@@ -12,8 +12,6 @@ export const routes: Routes = [
     { path: 'home', component: HomepageComponent},
     { path: 'formations', component: FormationsComponent},
     { path: 'demande-formation-spe', component:PageDemandeFormationSpeComponent},
-    { path: 'formations', component: FormationsComponent},
-    { path: 'demande-formation-spe', component:PageDemandeFormationSpeComponent},
     { path: 'catalogue', component:CatalogueComponent},
     {path:'**',component:NotFoundComponent}, // Déclaré à la fin
 ];
