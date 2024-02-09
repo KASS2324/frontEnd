@@ -20,3 +20,23 @@ section.resultats .resultat div p {
     font-size: 1.5rem;
     line-height: normal;
 }
+
+/* Button options */
+.detail__button {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background: var(--first-color);
+}
+.detail__button:hover {
+    background: var(--third-color);
+}
+.detail__button:active {
+    transform: scale(0.98);
+}
