@@ -5,6 +5,7 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { PageDemandeFormationSpeComponent } from './pages/page-demande-formation-spe/page-demande-formation-spe.component';
 import { CatalogueComponent } from './pages/catalogue/catalogue.component';
 import { NotFoundComponent } from './commons/not-found/not-found.component';
+import { DetailFormationComponent } from './pages/detail-formation/detail-formation.component';
 
 
 export const routes: Routes = [
@@ -15,5 +16,6 @@ export const routes: Routes = [
     { path: 'formations', component: FormationsComponent},
     { path: 'demande-formation-spe', component:PageDemandeFormationSpeComponent},
     { path: 'catalogue', component:CatalogueComponent},
+    { path: 'detail-formation/:id', component:DetailFormationComponent},
     {path:'**',component:NotFoundComponent}, // Déclaré à la fin
 ];
