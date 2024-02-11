@@ -1,19 +1,21 @@
 <section class="resultats">
     @for (formation of formations; track formation) {
         <div class="resultat">
-            <div class="resultatTitre">
+            <div class="resultatTitre" routerLink="/detail-formation/{{formation.id}}">
                 <p>{{ formation.nom }}</p>
                 <p>{{ formation.prix }}</p>
             </div>
-            
-            <p>
-                {{ formation.description }}
-            </p>
-            <p>Thème : {{ formation.theme }}</p>
-            <p>Sous-thème : {{ formation.sousTheme }}</p>
-            <p>Durée : {{ formation.duree }}</p>
-            <p>Ville : {{ formation.ville }}</p>
-            <button class="detail__button" routerLink="/detail-formation/{{formation.id}}">Détail Formation </button>
+            <div class="resultatDetails">
+                <p>
+                    {{ formation.description }}
+                </p>
+                <br>
+                <p>Thème : {{ formation.theme }}</p>
+                <p>Sous-thème : {{ formation.sousTheme }}</p>
+                <p>Durée : {{ formation.duree }}</p>
+                <p>Ville : {{ formation.ville }}</p>
+            </div>
+            <button class="detailsButton" mat-raised-button routerLink="/detail-formation/{{formation.id}}">Voir détails</button>
         </div>
     }
 </section>

@@ -1,11 +1,12 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { FormationService } from '../../../services/formation.service';
+import { MaterialModule } from '../../../material/material.module';
 
 @Component({
   selector: 'app-criteres-recherche',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [MaterialModule, ReactiveFormsModule],
   templateUrl: './criteres-recherche.component.html',
   styleUrl: './criteres-recherche.component.css'
 })
