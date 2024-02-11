@@ -1,0 +1,41 @@
+.bg_img {
+    background-image: url(../../../assets/campaign-creators.jpg);
+    background-size: cover;
+    height: 589px;
+}
+
+.flou{
+    background-color: rgb(255 255 255 / 30%);
+    backdrop-filter: blur(10px);
+    height: 589px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titres{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.grandTitre{
+    font-size: 5rem;
+}
+
+.sousTitre{
+    font-size: 3rem;
+}
+
+.fondPresITT{
+    width: 50%;
+    border-radius: 10px;
+    background-color: #D7D9CE90;
+    padding: 1rem;
+}
+
+#go-homepage{
+    z-index: 0;
+}
