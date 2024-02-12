@@ -1,13 +1,13 @@
-main {
+.heroSection {
     background-image: url(../../../assets/campaign-creators.jpg);
     background-size: cover;
-    height: 589px;
+    height: 649px;
 }
 
 .flou{
     background-color: rgb(255 255 255 / 30%);
     backdrop-filter: blur(10px);
-    height: 589px;
+    height: 659px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,4 +38,40 @@ main {
 
 #go-homepage{
     z-index: 0;
+}
+
+.carteSection {
+    padding: 3rem 10rem;
+    display: flex;
+    gap: 3rem;
+}
+
+.contourCarte {
+    background: var(--first-color);
+    width: fit-content;
+    border-radius: 20px;
+    width: 50%;
+    padding: 2rem;
+}
+
+.contourCarte img {
+    width: -webkit-fill-available;
+}
+
+.carteTitre {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.descCarte {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.carteButton {
+    width: fit-content;
+    align-self: center;
+    margin-top: 3rem;
 }

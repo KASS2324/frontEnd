@@ -10,12 +10,7 @@ section.resultats .resultat {
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 0px 10px #FFFFFF60;
-}
-
-section.resultats .resultat:hover {
     box-shadow: 0 0px 10px var(--third-color);
-    transition: all .5s;
 }
 
 section.resultats .resultat .resultatTitre {
