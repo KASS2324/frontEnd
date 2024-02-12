@@ -44,6 +44,7 @@ section.formulaireTitle {
     background-color: var(--main-bg-color);
     color: var(--second-bg-color);
     text-shadow: var(--main-bg-color);
+    border-radius: var(--border-radius);
 }
 
 /* Control messages */
@@ -155,4 +156,45 @@ section.formulaireTitle {
   }
   .btn-del-input {
     background-color: var(--second-color);
+  }
+
+  /* Pour les cartes de contacts */ 
+
+  .carte {
+    width: 440px;
+    height:240px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 40px auto;
+    display: flex; /* Utilisation de flexbox pour organiser les éléments en ligne */
+  }
+  
+  .photo {
+    width: 200px; /* Taille fixe pour la photo */
+    border-radius: 30%; /* Bord arrondi */
+    overflow: hidden; /* Cache les parties de l'image qui dépassent du cadre arrondi */
+    margin:10px;
+  }
+  
+  .photo img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .info {
+    padding: 20px;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 24px;
+    font-family:"Montserrat";
+  }
+  
+  p {
+    margin: 10px 0;
+    font-size: 16px;
+
   }
