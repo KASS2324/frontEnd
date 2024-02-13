@@ -3,15 +3,17 @@
 </section>
 
 <body class="formulaire-body">
-
+  <!-- Formulaire container -->
   <div class="container">
+    <!-- Formulaire title -->
     <h1 class="form__title">Votre Demande </h1>
     <div class="form__message form__message--error"></div>
 
+    <!-- Formulaire à remplir -->
     <form class="form form--hidden" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
       <!-- Nom -->
       <div class="form__input-group">
-        
         <label class ="form__input-text" for="nom">Nom : </label>
         <div class="form__input-error-message"></div>
         <input
@@ -21,23 +23,22 @@
           formControlName="nom"
           placeholder="Nom"
         />
-  
-        @if (submitted && form['nom'].invalid) {
-        <span>
-          @if (form['nom'].hasError('minlength')) {
-             <span>
-              * Nom doit contenir au minimum 2 caractères
-            </span>
-          }
-          @if (!form['nom'].value) {
-            <span>
-              * Nom obligatoire
-            </span>
-           }
-        </span>
-       }
-      </div>
 
+        @if (submitted && form['nom'].invalid) {
+          <span>
+            @if (form['nom'].hasError('minlength')) {
+               <span>
+                * Nom doit contenir au minimum 2 caractères
+              </span>
+            }
+            @if (!form['nom'].value) {
+              <span>
+                * Nom obligatoire
+              </span>
+             }
+          </span>
+         }
+      </div>
 
       <!-- Prenom -->
       <div class="form__input-group">
@@ -51,65 +52,73 @@
           placeholder="Prenom"
         />
         @if (submitted && form['prenom'].invalid) {
-        <span>
-          @if (form['prenom'].hasError('minlength')) {
           <span>
-            * Prénom doit contenir au minimum 2 caractères
+            @if (form['prenom'].hasError('minlength')) {
+            <span>
+              * Prénom doit contenir au minimum 2 caractères
+            </span>
+          }
+            @if (!form['prenom'].value) {
+            <span>
+              * Prénom obligatoire
+            </span>
+          }
           </span>
         }
-          @if (!form['prenom'].value) {
-          <span>
-            * Prénom obligatoire
-          </span>
-        }
-        </span>
-      }
+
       </div>
 
       <!-- Type de Formation -->
       <div class="form__input-group">
+        
         <label class ="form__input-text" for="typeFormation">Type de Formation : </label>
         <div class="form__input-error-message"></div>
-        <div>
-          <input
-          type="radio"
-          class="form__input" 
-          id="interEntreprise"
-          formControlName="typeFormation"
-          value="interEntreprise"
-          name="typeFormation" />
-
-          <label class ="form__input-text" for="interEntreprise">Inter-Entreprise</label>
-        </div>
-
-        <div>
-          <div class="form__input-error-message"></div>
-          <input
-          type="radio"
-          class="form__input" 
-          id="intraEntreprise"
-          formControlName="typeFormation"
-          value="intraEntreprise"
+        <!-- Inter-entreprise -->
+        <div class="types_formations">
           
-          name="typeFormation" />
+          <div>
+            <input
+            type="radio"
+            class="form__input" 
+            id="interEntreprise"
+            formControlName="typeFormation"
+            value="interEntreprise"
+            name="typeFormation" />
 
-          <label class ="form__input-text" for="intraEntreprise">Intra-Entreprise</label>
-        </div>
-
-        <div>
-          <div class="form__input-error-message"></div>
-          <input
-          type="radio"
-          class="form__input" 
-          id="autre"
-          formControlName="typeFormation"
-          value="autre"
+            <label class ="form__input-text" for="interEntreprise">Inter-Entreprise</label>
+          </div>
           
-          name="typeFormation" />
+          <!-- Intra-entreprise -->
+          <div>
+            <input
+            type="radio"
+            class="form__input" 
+            id="intraEntreprise"
+            formControlName="typeFormation"
+            value="intraEntreprise"
+            
+            name="typeFormation" />
 
-          <label class ="form__input-text" for="autre">Autre</label>
+            <label class ="form__input-text" for="intraEntreprise">Intra-Entreprise</label>
+          </div>
+          
+          <!-- Autre -->
+          <div>
+            <input
+            type="radio"
+            class="form__input" 
+            id="autre"
+            formControlName="typeFormation"
+            value="autre"
+            
+            name="typeFormation" />
+
+            <label class ="form__input-text" for="autre">Autre</label>
+          </div>
+
         </div>
         
+        <!-- Boucle -->
         @if (submitted && form['typeFormation'].invalid) {
         <span>
           @if (!form['typeFormation'].value) {
@@ -120,7 +129,6 @@
         </span>
       }
       </div>
-
 
       <!-- Nom de l'Entreprise -->
       <div class="form__input-group">
@@ -176,25 +184,36 @@
       }
       </div>
 
-      <!-- Telephone -->
-      <div  class="form__input-group" id="telephone">
-              
-        <div>
-          <label class ="form__input-text" for="telephone">Telephone : </label>
-          <div class="form__input-error-message"></div>
-          <input
-            type="tel"
-            class="form__input" 
-            id="telephone"
-            formControlName="telephones"
-            placeholder="Telephone"
-          />
+      <!-- Téléphone -->
+      <div class="form__input-group">
+        <label class ="form__input-text" for="telephone">Telephone : </label>
+        <div class="form__input-error-message"></div>
+        <input
+          type="tel"
+          class="form__input" 
+          id="telephone"
+          formControlName="telephones"
+          placeholder="Telephone"
+        />
+        
+        @if (submitted && form['telephone'].invalid) {
+          <span>
+            @if (form['telephone'].hasError('telephone')) {
+            <span>
+              * Téléphone invalide
+            </span>
+           }
+            @if (!form['telephone'].value) {
+            <span>
+              * Téléphone obligatoire
+            </span>
+           }
+          </span>
+        }
 
-        </div>
-  
       </div>
 
-        <!-- Demande de Formation Spécialisée -->
+      <!-- Demande de Formation Spécialisée -->
       <div class="form__input-group">
         <label class ="form__input-text" for="demande">Demande de Formation Spécialisée : </label>
         <div class="form__input-error-message"></div>
@@ -203,6 +222,7 @@
           id="demande"
           formControlName="demande"
           placeholder="Demande"
+          rows="8"
         >
         
         </textarea>
@@ -222,22 +242,72 @@
          }
         </span>
        }
+
       </div>
-      <!-- Button Submit -->
-            <div>
-              <button class="form__button" type="submit">Envoyer</button>
-            </div>
+
+      <!-- Bouton Submit -->
+
+      <div>
+        <button class="form__button" type="submit">Envoyer</button>
+      </div>
     
-      </form>
+    </form>
+  </div>
+
+  <!-- Cartes Contacts container -->
+  <div class="container">
+    <h1 class="form__title"> Contacts </h1>
+
+    <!-- Carte 1 -->
+    <div class="carte">
+      <!--Texte  -->
+      <div class="info">
+        <h1>Dupont Claire</h1>
+        <p class="role">Responsable de Formations</p>
+        <p class="coord"><img src="../../../assets/appel-telephonique.png" alt="icone-tel" class="icones"/> +123456789</p>
+        <p class="coord"><img src="../../../assets/email.png" alt="icone-email" class="icones"/> exemple&#64;email.com</p>
+      </div>
+      <!-- Photo -->
+      <div class="photo">
+        <img src="../../../assets/coordinateur-1.jpg" alt="Votre photo"/>
+      </div>
+
     </div>
 
-    <div class = "container">
-      <h1 class="form__title">Contacts </h1>
+    <!-- Carte 2 -->
+    <div class="carte">
+      <!--Texte  -->
+      <div class="info">
+        <h1>Dupuis Pierre</h1>
+        <p class="role">Responsable Pédagogique</p>
+        <p class="coord"><img src="../../../assets/appel-telephonique.png" alt="icone-tel" class="icones"/> +123456789</p>
+        <p class="coord"><img src="../../../assets/email.png" alt="icone-email" class="icones"/> exemple&#64;email.com</p>
+      </div>
+      <!-- Photo -->
+      <div class="photo">
+        <img src="../../../assets/coordinateur-2.jpg" alt="Votre photo"/>
+      </div>
+
     </div>
 
-    
+    <!-- Carte 3 -->
+    <div class="carte">
+      <!--Texte  -->
+      <div class="info">
+        <h1>Desprez Amélie</h1>
+        <p class ="role">Coordinateur de Formation</p>
+        <p class="coord"><img src="../../../assets/appel-telephonique.png" alt="icone-tel" class="icones"/> +123456789</p>
+        <p class="coord"><img src="../../../assets/email.png" alt="icone-email" class="icones"/> exemple&#64;email.com</p>
+        
+      </div>
+      <!-- Photo -->
+      <div class="photo">
+        <img src="../../../assets/coordinateur-3.jpg" alt="Votre photo"/>
+      </div>
 
+    </div>
 
+  </div>
 
 </body>
     

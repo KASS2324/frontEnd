@@ -44,6 +44,7 @@ section.formulaireTitle {
     background-color: var(--main-bg-color);
     color: var(--second-bg-color);
     text-shadow: var(--main-bg-color);
+    border-radius: var(--border-radius);
 }
 
 /* Control messages */
@@ -67,10 +68,7 @@ section.formulaireTitle {
 }
 
 .form__input {
-    display: flex;
-    justify-content: space-around;
-    align-content: space-around;
-    padding: 0.75rem;
+    padding:0.75rem;
     box-sizing: border-box;
     border-radius: var(--border-radius);
     border: 1px solid #dddddd;
@@ -92,6 +90,14 @@ section.formulaireTitle {
     margin-top: 0.5rem;
     font-size: 0.85rem;
     color: var(--color-error);
+}
+
+.types_formations{
+    display:flex;
+    justify-items: space-between;
+    justify-content: center;
+    padding:20px;
+
 }
 
 /* Button options */
@@ -129,7 +135,13 @@ section.formulaireTitle {
 .form__input-text{
     text-align: center;
     color: #fff;
+    margin-left: 20px;
+    margin-right: 20px;
 
+}
+
+textarea{
+    resize:none;
 }
 
 /* Telephone spécificités */
@@ -155,4 +167,55 @@ section.formulaireTitle {
   }
   .btn-del-input {
     background-color: var(--second-color);
+  }
+
+  /* Pour les cartes de contacts */ 
+
+  .carte {
+    width: 440px;
+    height:240px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 40px auto;
+    display: flex; /* Utilisation de flexbox pour organiser les éléments en ligne */
+  }
+  
+  .photo {
+    width: 200px; /* Taille fixe pour la photo */
+    border-radius: 30%; /* Bord arrondi */
+    overflow: hidden; /* Cache les parties de l'image qui dépassent du cadre arrondi */
+    margin:10px;
+  }
+  
+  .photo img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .info {
+    padding: 20px;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 20px;
+    font-family:"Montserrat";
+  }
+  
+  p {
+    margin: 10px 0;
+    font-size: 16px;
+
+  }
+
+  .role{
+    font-weight: bolder;
+  }
+
+  /* Icones email et téléphone*/
+  .icones{
+    width:20px;
+    height:20px;
   }
