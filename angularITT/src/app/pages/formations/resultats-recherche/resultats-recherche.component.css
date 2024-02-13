@@ -6,16 +6,12 @@ section.resultats {
 }
 section.resultats .resultat {
     background: var(--second-bg-color);
+    background: linear-gradient(to right, var(--second-bg-color), var(--first-color));;
     border-radius: 10px;
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 0px 10px #FFFFFF60;
-}
-
-section.resultats .resultat:hover {
     box-shadow: 0 0px 10px var(--third-color);
-    transition: all .5s;
 }
 
 section.resultats .resultat .resultatTitre {
@@ -52,4 +48,8 @@ section.resultats .resultat .resultatDetails {
 }
 .detailsButton:active {
     transform: scale(0.98);
+}
+
+span.bold {
+    font-weight: bold;
 }
