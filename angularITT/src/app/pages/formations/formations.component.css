@@ -10,11 +10,16 @@ section.rechercheTitle {
     display: flex;
     align-items: flex-end;
     width: 100%;
-    padding-left: 2rem;
+    padding-left: 6rem;
 }
 
 section.rechercheEtResultats {
     display: flex;
     background-color: rgb(255 255 255 / 30%);
     backdrop-filter: blur(10px);
+    justify-content: center;
+}
+
+.coteResultats {
+    width: 70%;
 }
