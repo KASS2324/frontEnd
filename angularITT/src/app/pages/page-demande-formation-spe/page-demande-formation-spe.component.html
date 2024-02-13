@@ -70,49 +70,52 @@
 
       <!-- Type de Formation -->
       <div class="form__input-group">
-        <!-- Inter-entreprise -->
+        
         <label class ="form__input-text" for="typeFormation">Type de Formation : </label>
         <div class="form__input-error-message"></div>
-        <div>
-          <input
-          type="radio"
-          class="form__input" 
-          id="interEntreprise"
-          formControlName="typeFormation"
-          value="interEntreprise"
-          name="typeFormation" />
-
-          <label class ="form__input-text" for="interEntreprise">Inter-Entreprise</label>
-        </div>
-        
-        <!-- Intra-entreprise -->
-        <div>
-          <div class="form__input-error-message"></div>
-          <input
-          type="radio"
-          class="form__input" 
-          id="intraEntreprise"
-          formControlName="typeFormation"
-          value="intraEntreprise"
+        <!-- Inter-entreprise -->
+        <div class="types_formations">
           
-          name="typeFormation" />
+          <div>
+            <input
+            type="radio"
+            class="form__input" 
+            id="interEntreprise"
+            formControlName="typeFormation"
+            value="interEntreprise"
+            name="typeFormation" />
 
-          <label class ="form__input-text" for="intraEntreprise">Intra-Entreprise</label>
-        </div>
-        
-        <!-- Autre -->
-        <div>
-          <div class="form__input-error-message"></div>
-          <input
-          type="radio"
-          class="form__input" 
-          id="autre"
-          formControlName="typeFormation"
-          value="autre"
+            <label class ="form__input-text" for="interEntreprise">Inter-Entreprise</label>
+          </div>
           
-          name="typeFormation" />
+          <!-- Intra-entreprise -->
+          <div>
+            <input
+            type="radio"
+            class="form__input" 
+            id="intraEntreprise"
+            formControlName="typeFormation"
+            value="intraEntreprise"
+            
+            name="typeFormation" />
 
-          <label class ="form__input-text" for="autre">Autre</label>
+            <label class ="form__input-text" for="intraEntreprise">Intra-Entreprise</label>
+          </div>
+          
+          <!-- Autre -->
+          <div>
+            <input
+            type="radio"
+            class="form__input" 
+            id="autre"
+            formControlName="typeFormation"
+            value="autre"
+            
+            name="typeFormation" />
+
+            <label class ="form__input-text" for="autre">Autre</label>
+          </div>
+
         </div>
         
         <!-- Boucle -->
@@ -219,6 +222,7 @@
           id="demande"
           formControlName="demande"
           placeholder="Demande"
+          rows="8"
         >
         
         </textarea>

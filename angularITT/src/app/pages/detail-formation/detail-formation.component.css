@@ -1,13 +1,15 @@
+
+/*Title side */
 .bg_img {
     background-image: url(../../../assets/campaign-creators.jpg);
     background-size: cover;
-    height: 589px;
+    height: 300px;/*589px;*/
 }
 
 .flou{
     background-color: rgb(255 255 255 / 30%);
     backdrop-filter: blur(10px);
-    height: 589px;
+    height: 300px;/*589px;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,11 +24,11 @@
 }
 
 .grandTitre{
-    font-size: 5rem;
+    font-size: 2.5rem;
 }
 
 .sousTitre{
-    font-size: 3rem;
+    font-size: 1.5rem;
 }
 
 .fondPresITT{
@@ -36,6 +38,38 @@
     padding: 1rem;
 }
 
-#go-homepage{
-    z-index: 0;
+/* Contenu détail */
+.contenu-detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
+
+/* Contenu Formation */
+.formation{
+    margin:20px;
+    padding:20px;
+    height: 500px;
+    width:500px;
+}
+
+
+/*Contenu Sessions */ 
+.ses-lieu{
+    display: flex;
+}
+.sessions{
+    margin:20px;
+    padding:20px;
+    height: 250px;
+    width:210px;
+}
+
+/*Contenu Lieu */
+.lieu{
+    margin:20px;
+    padding:20px;
+    height: 25px;
+    width:220px;
+}
+

@@ -68,10 +68,7 @@ section.formulaireTitle {
 }
 
 .form__input {
-    display: flex;
-    justify-content: space-around;
-    align-content: space-around;
-    padding: 0.75rem;
+    padding:0.75rem;
     box-sizing: border-box;
     border-radius: var(--border-radius);
     border: 1px solid #dddddd;
@@ -93,6 +90,14 @@ section.formulaireTitle {
     margin-top: 0.5rem;
     font-size: 0.85rem;
     color: var(--color-error);
+}
+
+.types_formations{
+    display:flex;
+    justify-items: space-between;
+    justify-content: center;
+    padding:20px;
+
 }
 
 /* Button options */
@@ -130,7 +135,13 @@ section.formulaireTitle {
 .form__input-text{
     text-align: center;
     color: #fff;
+    margin-left: 20px;
+    margin-right: 20px;
 
+}
+
+textarea{
+    resize:none;
 }
 
 /* Telephone spécificités */

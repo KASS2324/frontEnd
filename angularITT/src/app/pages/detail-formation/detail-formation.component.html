@@ -11,28 +11,41 @@
 
 </div>
 
- 
-<section class="formation">
-
-    <section class="formation-title">
-
-        <h2>{{formation.nom}} </h2>
+<div class="contenu-detail">
     
+    <section class="formation">
+
+        <p class="sousTitre">Détails de la Formation : </p>
+
+        <section class="detail-formation">
+
+            <p>{{formation.detail}}</p>
+
+        </section>
+
     </section>
+    <div class="ses-lieu">
+        
+        <section class="sessions">
+            <p class="sousTitre">Sessions : </p>
 
-    <section class="detail-formation">
+            @for (session of sessions; track session) {
+                <p>Du {{session.dateStartSession}} au {{session.dateEndSession}}</p>
+            }
 
-        <p>{{formation.description}}</p>
+        </section>
 
-    </section>
+        <section class="lieu">
+            <p class="sousTitre">Lieu de la Formation : </p>
 
-</section>
+            <p>{{formation.ville}}</p>
 
-<section class="sessions">
-    @for (session of sessions; track session) {
-        <p>Début : {{session.dateStartSession}}</p>
-        <p>Fin : {{session.dateEndSession}}</p>
-    }
+        </section>
 
-</section>
+    </div>
 
+    <div class="preq-ins">
+        
+    </div>
+
+</div>
