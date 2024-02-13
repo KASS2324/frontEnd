@@ -1,6 +1,5 @@
 /* Generalities */
 .formulaire-body {
-    height: 1300px;
     display: flex;
     align-content: space-around;
     justify-content: space-evenly;
@@ -13,8 +12,8 @@
     width: 600px;
     height: 1000px;
     max-width: 600px;
-    margin-top:10%;
-    margin-bottom:20%;
+    margin-top:5%;
+    margin-bottom:5%;
     padding: 2rem;
     box-shadow: 0 0 40px rgba(215, 216, 210, 0.2);
     border-radius: var(--border-radius);
@@ -24,13 +23,13 @@
 }
 
 section.formulaireTitle {
-    height: 100px;
+    height: 60px;
     background-color: var(--main-bg-color);
     color: var(--second-bg-color);
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     width: 100%;
-    padding-left: 2rem;
+    padding-left: 6rem;
 }
 
 .form__input,
