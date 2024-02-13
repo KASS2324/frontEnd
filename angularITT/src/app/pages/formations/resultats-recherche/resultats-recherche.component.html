@@ -10,10 +10,10 @@
                     {{ formation.description }}
                 </p>
                 <br>
-                <p>Thème : {{ formation.theme }}</p>
-                <p>Sous-thème : {{ formation.sousTheme }}</p>
-                <p>Durée : {{ formation.duree }}</p>
-                <p>Ville : {{ formation.ville }}</p>
+                <p><span class="bold">Thème : </span>{{ formation.theme }}</p>
+                <p><span class="bold">Sous-thème : </span>{{ formation.sousTheme }}</p>
+                <p><span class="bold">Durée : </span>{{ formation.duree }}</p>
+                <p><span class="bold">Ville : </span>{{ formation.ville }}</p>
             </div>
             <button class="detailsButton" mat-raised-button routerLink="/detail-formation/{{formation.id}}">Voir détails</button>
         </div>

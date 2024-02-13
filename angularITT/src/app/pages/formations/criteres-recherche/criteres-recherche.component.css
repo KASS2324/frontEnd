@@ -21,9 +21,22 @@ fieldset.criteres {
     border-radius: 10px;
     padding: 1rem;
     box-shadow: 0 0px 10px #FFF;
+    background: #FFFA;
 }
 
 div.boutons {
     display: flex;
     justify-content: center;
+}
+
+div.ligneSelection {
+    display: flex;
+    gap: 0.5rem;
+}
+
+input[type='radio']:checked {
+    accent-color: var(--first-color);
+}
+select.decorated option:hover {
+    background: var(--first-color);
 }
