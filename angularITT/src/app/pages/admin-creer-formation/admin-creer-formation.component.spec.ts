@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdminAjoutFormationComponent } from './admin-ajout-formation.component';
+import { AdminCreerFormationComponent } from './admin-creer-formation.component';
 
 describe('AdminAjoutFormationComponent', () => {
-  let component: AdminAjoutFormationComponent;
-  let fixture: ComponentFixture<AdminAjoutFormationComponent>;
+  let component: AdminCreerFormationComponent;
+  let fixture: ComponentFixture<AdminCreerFormationComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AdminAjoutFormationComponent]
+      imports: [AdminCreerFormationComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(AdminAjoutFormationComponent);
+    fixture = TestBed.createComponent(AdminCreerFormationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
