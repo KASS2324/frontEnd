@@ -1,0 +1,173 @@
+<div class="backgroundAdmin">
+
+  <div class="containerCreation">
+    <div class="form__title">
+      <h1 class="">Crée une formation</h1>
+    </div>
+      
+      <div class="form__message form__message--error"></div>
+  
+      <form class="form form--hidden" [formGroup]="formationForm" (ngSubmit)="onSubmit()">
+        <div class="positionForm">
+            <div class="positionFormBlock">
+            <div class="form__input-group">
+              <label class ="form__input-text" for="nom">Titre de la foramtion * : </label>
+              <div class="form__input-error-message"></div>
+              <input type="text" class="form__input" id="nom" formControlName="nom" placeholder="Titre"/>
+              @if (submitted && form['nom'].invalid) {
+                <span>
+                  @if (form['nom'].hasError('minlength')) {
+                    <span>
+                      * Le titre doit contenir au minimum 2 caractères
+                    </span>
+                  }
+                  @if (!form['nom'].value) {
+                    <span>
+                      * Nom obligatoire
+                    </span>
+                  }
+                </span>
+              }
+            </div>
+            <div class="form__input-group">
+              <label class ="form__input-text" for="theme">Catégorie * : </label>
+              <select name="categorie" class="form__input form__select" id="categorie" formControlName="categorie" >
+                <option value="Selectionner">Sélectionner</option>
+                @for (categorie of categories; track categorie) {
+                    <option [value]="categorie">{{ categorie }}</option>
+                }
+              </select>
+            </div>
+
+            <div class="form__input-group">
+              <label class ="form__input-text" for="theme">Thème : </label>
+              <select name="theme" class="form__input form__select" id="theme" formControlName="theme">
+                <option value="Selectionner">Sélectionner</option>
+                @for (theme of themes; track theme) {
+                    <option [value]="theme">{{ theme }}</option>
+                }
+              </select>
+            </div>
+
+            <div class="form__input-group">
+              <label class ="form__input-text" for="sousTheme">Sous-thème : </label>
+              <select name="sousTheme" class="form__input form__select" id="sousTheme" formControlName="sousTheme">
+                <option value="Selectionner">Sélectionner</option>
+                @for (sousTheme of sousThemes; track sousTheme) {
+                    <option [value]="sousTheme">{{ sousTheme }}</option>
+                }
+              </select>
+            </div>
+
+            <div  class="form__input-group" id="prix">
+                <label class ="form__input-text" for="prix">Montant * : </label>
+                <div class="form__input-error-message"></div>
+                <input type="prix" class="form__input" id="prix" formControlName="prix" placeholder="0€"/>
+                @if (submitted && form['prix'].invalid) {
+                  <span>
+                    @if (form['prix'].hasError('minlength')) {
+                    <span>
+                      * Le prix doit est un nombre a 3 chiffres
+                    </span>
+                    }
+                    @if (!form['prix'].value) {
+                    <span>
+                      * Prix obligatoire
+                    </span>
+                    }
+                  </span>
+                }
+              </div>
+
+            <div class="form__input-group">
+              <label class ="form__input-text" for="duree">Durée en heures * : </label>
+              <div class="form__input-error-message"></div>
+              <input class="form__input" id="duree" formControlName="duree" placeholder="0"/>
+              @if (submitted && form['duree'].invalid) {
+                <span>
+                  @if (form['duree'].hasError('minlength')) {
+                  <span>
+                    * La durée doit contenir au minimum 1H
+                  </span>
+                  }
+                  @if (!form['duree'].value) {
+                  <span>
+                    * Durée obligatoire
+                  </span>
+                  }
+                </span>
+              }
+            </div>
+
+            <div class="form__input-group">
+              <label class ="form__input-text" for="ville" >Ville * : </label>
+              <div class="form__input-error-message"></div>
+              <input class="form__input" id="ville" formControlName="ville" placeholder="Ville"/>
+              @if (submitted && form['ville'].invalid) {
+                <span>
+                  @if (form['ville'].hasError('minlength')) {
+                  <span>
+                    * La ville doit contenir au minimum 2 caractère
+                  </span>
+                  }
+                  @if (!form['ville'].value) {
+                  <span>
+                    * Ville obligatoire
+                  </span>
+                  }
+                </span>
+              }
+            </div>
+          </div>
+
+          <div class="positionFormBlock positionFormBlock2">
+            <div class="form__input-group">
+              <label class ="form__input-text" for="description">Description de la formation * : </label>
+              <div class="form__input-error-message"></div>
+              <textarea class="form__input form__textaera " id="description" formControlName="description" placeholder="Description ..." rows="8"></textarea>
+              @if (submitted && form['description'].invalid) {
+                <span>
+                  @if (form['description'].hasError('minlength')) {
+                  <span>
+                    * La description doit contenir au minimum 100 caractères
+                  </span>
+                  }
+                  @if (!form['description'].value) {
+                  <span>
+                    * Description obligatoire
+                  </span>
+                  }
+                </span>
+              }
+            </div>
+
+            <div class="form__input-group">
+              <label class ="form__input-text" for="detail">Détail de la formation * : </label>
+              <div class="form__input-error-message"></div>
+              <textarea class="form__input form__textaera " id="detail" formControlName="detail" placeholder="Détail ..." rows="8"></textarea>
+              @if (submitted && form['description'].invalid) {
+                <span>
+                  @if (form['detail'].hasError('minlength')) {
+                  <span>
+                    * La détail doit contenir au minimum 100 caractères
+                  </span>
+                  }
+                  @if (!form['detail'].value) {
+                  <span>
+                    * Détail obligatoire
+                  </span>
+                  }
+                </span>
+              }
+            </div>
+          </div>
+        </div>
+
+        <div class="div-button">
+          <p>Les champs avec une * sont oblifatoires</p>
+          <button class="form__button" type="submit">Enregistrer</button>
+        </div>
+
+      </form>
+  </div>
+</div>

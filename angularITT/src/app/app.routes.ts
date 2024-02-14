@@ -6,6 +6,8 @@ import { PageDemandeFormationSpeComponent } from './pages/page-demande-formation
 import { CatalogueComponent } from './pages/catalogue/catalogue.component';
 import { NotFoundComponent } from './commons/not-found/not-found.component';
 import { DetailFormationComponent } from './pages/detail-formation/detail-formation.component';
+import { AdminCreerFormationComponent } from './pages/admin-creer-formation/admin-creer-formation.component';
+import { AdminMenuComponent } from './pages/admin-menu/admin-menu.component';
 
 
 export const routes: Routes = [
@@ -15,5 +17,7 @@ export const routes: Routes = [
     { path: 'demande-formation-spe', component:PageDemandeFormationSpeComponent},
     { path: 'catalogue', component:CatalogueComponent},
     { path: 'detail-formation/:id', component:DetailFormationComponent},
+    { path: 'adminMenu', component:AdminMenuComponent},
+    { path: 'adminCreerFormation', component:AdminCreerFormationComponent},
     {path:'**',component:NotFoundComponent}, // Déclaré à la fin
 ];
