@@ -2,7 +2,7 @@
   <h2>Demande de Formation Personalisée  </h2>
 </section>
 
-<body class="formulaire-body">
+<div class="formulaire-body">
   <!-- Formulaire container -->
   <div class="container">
     <!-- Formulaire title -->
@@ -308,6 +308,13 @@
     </div>
 
   </div>
+</div>
 
-</body>
+<!-- Envoi Formulaire avec succès -->
+<div class="popup" id="popup">
+  <img src="../../../assets/tick.png" />
+  <h1>Merci !</h1>
+  <p>Votre demande a été envoyée avec succès !</p>
+  <button type="button" (click)="closePopup()">OK</button>
+</div>
     

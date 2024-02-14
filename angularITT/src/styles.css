@@ -16,7 +16,7 @@ body {
     --second-color: #0C7489;
     --third-color: #13505B;
     --main-bg-color: #040404;
-    --second-bg-color: #D7D9CE;
+    --second-bg-color: #eef0e2;
     --color-error: #ff0000;
     --color-success: #4bb544;
     --border-radius: 4px;
@@ -26,6 +26,28 @@ body {
 }
 a {
     text-decoration: none;
+}
+/*================================================================ SCROLLBAR =====================================================================*/
+::-webkit-scrollbar {
+    width: 8px;    
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--second-bg-color); 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--first-color); 
+    border-radius: 5px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--second-color); 
+}
+/*============================================================== FIN SCROLLBAR =====================================================================================*/ 
+ 
+input[type='radio']:checked {
+    accent-color: var(--first-color);
 }
 
 html, body { 
