@@ -38,14 +38,91 @@
     padding: 1rem;
 }
 
+/* Sous-titres */
+.sousTitre {
+    margin-bottom: 10px;
+}
+
 /* Contenu détail */
+.contenu-detail {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Contenu Formation */
+.formation {
+    flex: 1 1 60%; /* Prend 60% de l'espace */
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-formation {
+    margin-bottom: 20px; /* Marge entre les éléments */
+}
+
+.sessions-lieu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sessions, .lieu {
+    flex: 1 1 calc(50% - 10px); /* Prend 50% de l'espace avec une marge entre les éléments */
+    margin-right: 20px;
+}
+
+.lieu {
+    margin-top: 20px; /* Espace entre les éléments */
+}
+
+/* Image */
+.image-container {
+    flex: 1 1 40%; /* Prend 30% de l'espace */
+    position: relative;
+}
+
+.image-container img {
+    max-width: 500px;
+    height: auto;
+}
+
+/* Boutons */
+.preq-ins {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.preq-ins button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.preq-ins button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+/* Contenu détail 
 .contenu-detail{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-/* Contenu Formation */
+/* Contenu Formation 
 .formation{
     margin:20px;
     padding:20px;
@@ -54,7 +131,7 @@
 }
 
 
-/*Contenu Sessions */ 
+/*Contenu Sessions 
 .ses-lieu{
     display: flex;
 }
@@ -65,11 +142,14 @@
     width:210px;
 }
 
-/*Contenu Lieu */
+/*Contenu Lieu 
 .lieu{
     margin:20px;
     padding:20px;
     height: 25px;
     width:220px;
 }
+
+*/
+
 
