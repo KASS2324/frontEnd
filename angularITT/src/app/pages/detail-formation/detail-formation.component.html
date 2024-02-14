@@ -1,0 +1,51 @@
+<div class="bg_img">
+    <div class="flou">
+        <section class="titres">
+            <p class="grandTitre">{{formation.categorie}}</p>
+            <p class="sousTitre">{{formation.nom}}</p>
+            <div class="fondPresITT">
+                <p class="presentationITT">{{formation.description}}</p>
+            </div>
+        </section>
+    </div>
+
+</div>
+
+<div class="contenu-detail">
+    
+    <section class="formation">
+
+        <p class="sousTitre">Détails de la Formation : </p>
+
+        <section class="detail-formation">
+
+            <p>{{formation.detail}}</p>
+
+        </section>
+
+    </section>
+    <div class="ses-lieu">
+        
+        <section class="sessions">
+            <p class="sousTitre">Sessions : </p>
+
+            @for (session of sessions; track session) {
+                <p>Du {{session.dateStartSession}} au {{session.dateEndSession}}</p>
+            }
+
+        </section>
+
+        <section class="lieu">
+            <p class="sousTitre">Lieu de la Formation : </p>
+
+            <p>{{formation.ville}}</p>
+
+        </section>
+
+    </div>
+
+    <div class="preq-ins">
+        
+    </div>
+
+</div>

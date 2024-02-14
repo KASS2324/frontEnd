@@ -1,7 +1,6 @@
 .baniere {
   background-image: url(../../../assets/background-catalogue.jpg);
   background-size: cover;
-  height: 1000px;
 }
 
 .titres {
@@ -148,7 +147,11 @@ div a {
 }**/
 
 .submenu{
-    padding : 0 ;
+  padding : 0 ;
 }
 
+div.flou {
+  background-color: rgb(255 255 255 / 30%);
+  backdrop-filter: blur(10px);
+}
 

@@ -17,7 +17,7 @@ export class FormationService {
   }
 
   getFormation(id: number): Observable<Formation> {
-    return this.httpClient.get<Formation>(`${this.apiUrl}/formations/${id}`);
+    return this.httpClient.get<Formation>(`${this.apiUrl}/formations/find/${id}`);
   }
 
   createFormation(formation: Formation): Observable<Formation> {
@@ -38,5 +38,8 @@ export class FormationService {
 
   getFormationsByThemeAndVille(theme: string, ville: string): Observable<Formation[]> {
     return this.httpClient.get<Formation[]>(`${this.apiUrl}/formations/byThemeAndVille?theme=${theme}&ville=${ville}`);
+  }
+  getThemesFormations(): Observable<String[]> {
+    return  this.httpClient.get<String[]>(`${this.apiUrl}/formations/themes`);
   }
 }

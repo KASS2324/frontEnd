@@ -1,6 +1,5 @@
 /* Generalities */
-body {
-    height: 1300px;
+.formulaire-body {
     display: flex;
     align-content: space-around;
     justify-content: space-evenly;
@@ -13,8 +12,8 @@ body {
     width: 600px;
     height: 1000px;
     max-width: 600px;
-    margin-top:10%;
-    margin-bottom:20%;
+    margin-top:5%;
+    margin-bottom:5%;
     padding: 2rem;
     box-shadow: 0 0 40px rgba(215, 216, 210, 0.2);
     border-radius: var(--border-radius);
@@ -24,13 +23,13 @@ body {
 }
 
 section.formulaireTitle {
-    height: 100px;
+    height: 60px;
     background-color: var(--main-bg-color);
     color: var(--second-bg-color);
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     width: 100%;
-    padding-left: 2rem;
+    padding-left: 6rem;
 }
 
 .form__input,
@@ -44,6 +43,7 @@ section.formulaireTitle {
     background-color: var(--main-bg-color);
     color: var(--second-bg-color);
     text-shadow: var(--main-bg-color);
+    border-radius: var(--border-radius);
 }
 
 /* Control messages */
@@ -67,10 +67,7 @@ section.formulaireTitle {
 }
 
 .form__input {
-    display: flex;
-    justify-content: space-around;
-    align-content: space-around;
-    padding: 0.75rem;
+    padding:0.75rem;
     box-sizing: border-box;
     border-radius: var(--border-radius);
     border: 1px solid #dddddd;
@@ -92,6 +89,14 @@ section.formulaireTitle {
     margin-top: 0.5rem;
     font-size: 0.85rem;
     color: var(--color-error);
+}
+
+.types_formations{
+    display:flex;
+    justify-items: space-between;
+    justify-content: center;
+    padding:20px;
+
 }
 
 /* Button options */
@@ -129,7 +134,13 @@ section.formulaireTitle {
 .form__input-text{
     text-align: center;
     color: #fff;
+    margin-left: 20px;
+    margin-right: 20px;
 
+}
+
+textarea{
+    resize:none;
 }
 
 /* Telephone spécificités */
@@ -155,4 +166,104 @@ section.formulaireTitle {
   }
   .btn-del-input {
     background-color: var(--second-color);
+  }
+
+  /* Pop up formulaire envoyé */
+  .popup{
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translate(-50%,-50%)scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color:#333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+  }
+
+  .open-popup{
+    visibility: visible;
+    top:100%;
+    transform: translate(-50%,-50%)scale(1);
+  }
+
+  .popup img{
+    width:100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .popup h1{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+  }
+
+  .popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: var(--second-color);
+    color:#fff;
+    border:0;
+    outline:none;
+    font-size:18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+
+  }
+  /* Pour les cartes de contacts */ 
+
+  .carte {
+    width: 440px;
+    height:240px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 40px auto;
+    display: flex; /* Utilisation de flexbox pour organiser les éléments en ligne */
+  }
+  
+  .photo {
+    width: 200px; /* Taille fixe pour la photo */
+    border-radius: 30%; /* Bord arrondi */
+    overflow: hidden; /* Cache les parties de l'image qui dépassent du cadre arrondi */
+    margin:10px;
+  }
+  
+  .photo img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .info {
+    padding: 20px;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 20px;
+    font-family:"Montserrat";
+  }
+  
+  p {
+    margin: 10px 0;
+    font-size: 16px;
+
+  }
+
+  .role{
+    font-weight: bolder;
+  }
+
+  /* Icones email et téléphone*/
+  .icones{
+    width:20px;
+    height:20px;
   }

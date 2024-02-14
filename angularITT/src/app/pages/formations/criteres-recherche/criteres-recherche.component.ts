@@ -1,12 +1,12 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { ThemeService } from '../../../services/theme.service';
-import Theme from '../../../models/theme.model';
+import { FormationService } from '../../../services/formation.service';
+import { MaterialModule } from '../../../material/material.module';
 
 @Component({
   selector: 'app-criteres-recherche',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [MaterialModule, ReactiveFormsModule],
   templateUrl: './criteres-recherche.component.html',
   styleUrl: './criteres-recherche.component.css'
 })
@@ -23,9 +23,9 @@ export class CriteresRechercheComponent {
   // Ajout d'un booléen pour vérifier si le formulaire est soumis
   submitted: boolean = false;
 
-  themes: Theme[] = [];
+  themes: String[] = [];
 
-  constructor(private formBuilder: FormBuilder, private themeService: ThemeService){}
+  constructor(private formBuilder: FormBuilder, private formationService: FormationService){}
 
   public onSubmit(): void {
     this.submitted = true;
@@ -33,7 +33,7 @@ export class CriteresRechercheComponent {
   }
 
   ngOnInit(): void {
-    this.themeService.getThemes().subscribe((themes) => { this.themes = themes });
+    this.formationService.getThemesFormations().subscribe((themes) => { this.themes = themes });
   }
 
   public get form() {

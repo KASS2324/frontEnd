@@ -1,23 +1,25 @@
 <main>
-    <section class="rechercherFormation" id="rechercherFormation">
-        <h2>Rechercher une formation</h2>
-        <form action="./recherche.html" method="post" id="rechForm">
-            <div>
-                <input class="general-input" type="text">
-                <button type="submit" mat-raised-button id="go-homepage">GO</button>
-            </div>
-            <div>
-                <select name="theme" id="theme" area-placeholder="choisissez un thème">
-                    <option class="general-input" value="management">Management des SI</option>
-                    <option class="general-input" value="gestion">Gestion de projet</option>
-                    <option class="general-input" value="developpement">Développement d'application</option>
-                </select>
-            </div>
-            <div>
-                <select name="soustheme" id="soustheme">
-                    <option value="sous-thème">choisissez un sous-thème</option>
-                </select>
-            </div>
-        </form>
+    <section class="heroSection">
+        <div class="flou">
+            <section class="titres">
+                <p class="grandTitre">IT Training</p>
+                <p class="sousTitre">Organisme de formation</p>
+                <div class="fondPresITT">
+                    <p class="presentationITT">Spécialisé dans les technologies de l'information, IT Training dispose d'un catalogue de formation fourni, ainsi que la possibilité de faire des demandes de formations spécialisées sur mesure.</p>
+                </div>
+            </section>
+        </div>
+    </section>
+    <section class="carteSection" #carteSection>
+        <div class="contourCarte">
+            <img src="../../../assets/locations-map.png" alt="carte de france">
+        </div>
+        <div class="descCarte">
+            <h3 class="carteTitre">IT Training, organisme de formation professionnelle informatique à Paris et en régions</h3>
+            <p>Au cœur du premier quartier d'affaires européen, nous vous proposons un espace de 2500 m2 entièrement dédié à la formation.</p>
+            <p>Nos 42 salles de cours disposent de tous les équipements indispensables au bon déroulement de vos formations : PC de dernière génération, infrastructures informatiques de haut niveau, matériel pédagogique performant…</p>
+            <p>3 espaces d'accueil, 3 espaces détente ainsi qu'un centre de test homologué Vue contribuent à faire de notre site de La Défense un cadre idéal pour l'acquisition de nouvelles compétences.</p>
+            <button class="carteButton" mat-raised-button (click)="allerVersElement(carteSection)">En savoir plus</button>
+        </div>
     </section>
 </main>
