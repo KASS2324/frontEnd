@@ -1,0 +1,75 @@
+
+/*Title side */
+.bg_img {
+    background-image: url(../../../assets/campaign-creators.jpg);
+    background-size: cover;
+    height: 300px;/*589px;*/
+}
+
+.flou{
+    background-color: rgb(255 255 255 / 30%);
+    backdrop-filter: blur(10px);
+    height: 300px;/*589px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titres{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.grandTitre{
+    font-size: 2.5rem;
+}
+
+.sousTitre{
+    font-size: 1.5rem;
+}
+
+.fondPresITT{
+    width: 50%;
+    border-radius: 10px;
+    background-color: #D7D9CE90;
+    padding: 1rem;
+}
+
+/* Contenu détail */
+.contenu-detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* Contenu Formation */
+.formation{
+    margin:20px;
+    padding:20px;
+    height: 500px;
+    width:500px;
+}
+
+
+/*Contenu Sessions */ 
+.ses-lieu{
+    display: flex;
+}
+.sessions{
+    margin:20px;
+    padding:20px;
+    height: 250px;
+    width:210px;
+}
+
+/*Contenu Lieu */
+.lieu{
+    margin:20px;
+    padding:20px;
+    height: 25px;
+    width:220px;
+}
+

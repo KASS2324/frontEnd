@@ -1,72 +1,96 @@
-
-
 <section class="baniere">
-  <article class="catalogue">
+  <div class="flou">
     <div class="titres">
-      <H2 id="titre1"> NOS CATALOGUES DES FORMATIONS
-      </H2>
-
-      <H4 id="titre2">A ce jour,nous vous proposons plus de 800 formations
-
-      </H4>
-    </div>
-    <div class="block">
-
-
-      <mat-toolbar class="catalogue-button" >
-        <button class="rh-button" mat-raised-button routerLink="home">Ressources humaines </button>
-        <button class="nav-button"  mat-raised-button routerLink="catalogue"> Management </button>
-        <button class="nav-button"  mat-raised-button routerLink="formations">Finances</button>
-        <button class="nav-button"  mat-raised-button routerLink="demande-formation-spe">Informatiques </button> 
-
-    </mat-toolbar>
-
-
-
-
-
+      <H4 id="titre2">A ce jour,nous vous proposons plus de 800 formations </H4>
     </div>
 
-  </article>
+    <nav class="dropdownmenu">
+      <ul>
+        <li>
+          <a href="rh">Resouces humaines</a>
+          <ul class="submenu" id="submenu1">
+            <li><a href="">Pratiques des ressources humaines</a></li>
+            <li><a href="">Initier une démarche RSE à la RH</a></li>
+            <li><a href="">Posture et savoir RH</a></li>
+            <li><a href="">Rémunération et pilotage RH</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="mn">Management</a>
+          <ul class="submenu"  id="submenu2">
+            <li><a href="">Management</a></li>
+            <li><a href="">Gestion de projet</a></li>
+            <li><a href="">Systèmes d'information</a></li>
+            <li><a href="">Chef de projet Informatique</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">Finances</a>
+          <ul class="submenu"id="submenu3">
+            <li><a href="">Analyste financier</a></li>
+            <li><a href="">Conseiller financier</a></li>
+            <li><a href="">Ficalité</a></li>
+            <li><a href="">Controleur Financier</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="rh">Informatiques</a>
+          <ul class="submenu" id="submenu4">
+            <li><a href="">Developpement</a></li>
+            <li><a href="">Administration serveur</a></li>
+            <li><a href="">Système d'exploitation </a></li>
+            <li><a href="">Outils collaboratifs</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
 
+    <article class="formules">
+      <div class="formule1">
+        <H2> 3 formules : </H2>
+      </div>
 
-  <div class="formule1">
-    <H2> 3 formules : </H2>
-  </div>
+      <div class="parent">
+        <div class="box1">
+          <h3>Intra-entreprise</h3>
+          <p>
+            C'est une action de formation pour une seule entreprise et pour un ou
+            plusieurs de vos collaborateurs. Vous choisissez le lieu et la date à
+            votre convenance. <br />
+            <br />
+          </p>
+        </div>
+        <div class="box2">
+          <h3>Inter-entreprise</h3>
+          <p>
+            C'est une action de formation qui regroupe des salariés de diverses
+            entreprises dans une même session. Le lieu et les dates sont imposées.
+            <br />
+            <br />
+          </p>
+        </div>
+        <div class="box3">
+          <h3>Demande Individuelle</h3>
 
-  <div class="parent">
+          <p>
+            C'est une action de formation que nous réalisons de façon
+            Personalisée. Nous pouvons adapter les dates, les horaires et le
+            rythme à vos besoins. <br />
+            <br />
+          </p>
+        </div>
+      </div>
 
-    <div class="box1">
-      <h3> Intra-entreprise</h3>
-      <p>C'est une action de formation pour une seule entreprise et pour un ou plusieurs de vos collaborateurs.
-        Vous choisissez le lieu et la date à votre convenance. <br> <br>
-
-      </p>
-
-    </div>
-    <div class="box2">
-      <h3> Inter-entreprise</h3>
-      <p>
-        C'est une action de formation qui regroupe des salariés de diverses entreprises dans une même session.
-        Le lieu et les dates sont imposées. <br> <br>
-
-      </p>
-    </div>
-    <div class="box3">
-      <h3> Demande Individuelle </h3>
-
-      <p>
-        C'est une action de formation que nous réalisons de façon Personalisée.
-        Nous pouvons adapter les dates, les horaires et le rythme à vos besoins. <br> <br>
-      </p>
-    </div>
-
-  </div>
-
-    <div>
-      <mat-toolbar class="button-individuel1">
-        <button class="individuel1" mat-raised-button routerLink="catalogue">CATALOGUES</button>
-        <button class="individuel2" mat-raised-button routerLink="catalogue">DEMANDE PERSONALISEE</button>
-      </mat-toolbar>
-    </div>
+      <div>
+        <mat-toolbar class="individuel">
+          <button class="individuel1" mat-raised-button routerLink="catalogue">
+            CATALOGUES
+          </button>
+          <button class="individuel2" mat-raised-button routerLink="catalogue">
+            DEMANDE PERSONALISEE
+          </button>
+        </mat-toolbar>
+      </div>
+    </article>
+  </div>  
 </section>

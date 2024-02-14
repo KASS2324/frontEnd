@@ -3,6 +3,7 @@ import { FormArray, FormBuilder, FormGroup, ReactiveFormsModule, Validators } fr
 import DemandeSpe from '../../models/demande-spe.model';
 import { DemandeSpeService } from '../../services/demande-spe.service';
 import DemandeSpeUser from '../../models/demande-spe-user.model';
+import { ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-page-demande-formation-spe',
@@ -36,7 +37,7 @@ export class PageDemandeFormationSpeComponent {
   submitted: boolean = false;
 
   // Déclaration du formbuilder dans le constructeur
-  constructor(private formBuilder: FormBuilder,private demandeSpeService:DemandeSpeService) {}
+  constructor(private formBuilder: FormBuilder,private demandeSpeService:DemandeSpeService,private elementRef: ElementRef<HTMLElement>) {}
 
   private addUser(): void {
     this.users.push(this.userForm.value);
@@ -64,6 +65,7 @@ export class PageDemandeFormationSpeComponent {
     this.submitted = true
     if (this.userForm.valid) {
       this.addUser();
+      this.openPopup();
     }
   }
   public get form() {
@@ -71,8 +73,29 @@ export class PageDemandeFormationSpeComponent {
   }
 
 
+  // POUR LE POP UP WINDOW
 
-  //Property Checked
+  
+  //open pop up window
+  public openPopup() {
+    // Get  variable by element id
+  
+  const popup = document.getElementById('popup');
+  if (popup !== null) {
+    popup.classList.add("open-popup");
+  }
+
+  }
+
+  // Close pop up window
+  public closePopup() {
+  
+    const popup = document.getElementById('popup');
+  if (popup !== null) {
+    popup.classList.remove("open-popup");
+  }
+
+  }
   
   
 }

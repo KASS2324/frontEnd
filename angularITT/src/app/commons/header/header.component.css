@@ -4,7 +4,7 @@
 }
 header {
     background-color: var(--second-bg-color);   
-    padding: 1rem;
+    padding: .8rem;
     width: 100%;
     z-index:2;
     align-items: center;
@@ -23,14 +23,14 @@ header {
 }
 
 .header-title{
-    margin-right: 5rem;
-    margin-left: 10rem;
+    margin-right: 10rem;
     font-family: "Montserrat",Roboto, "Helvetica Neue", sans-serif;
     font-weight: 900;
+    text-shadow: 1px 1px 2px #13505B, 0 0 1em #13505B, 0 0 0.2em #13505B;
 }
 
 #logo {
-    width: 50%;
+    width: 130px;
 }
 
 

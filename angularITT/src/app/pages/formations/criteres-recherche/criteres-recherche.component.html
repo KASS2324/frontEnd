@@ -1,6 +1,6 @@
 <section class="rechercheForm">
     <form [formGroup]="selectionForm" (ngSubmit)="onSubmit()" id="rechForm">
-        <fieldset>
+        <fieldset class="criteres">
             <legend>Critères</legend>
             <div>
                 <label for="theme">Thème : </label>
@@ -30,8 +30,7 @@
             </fieldset>
             
             <div class="boutons">
-                <button type="submit">Valider</button>
-                <button type="reset">Réinitialiser</button>
+                <button mat-raised-button type="submit">Valider</button>
             </div>
             
         </fieldset>

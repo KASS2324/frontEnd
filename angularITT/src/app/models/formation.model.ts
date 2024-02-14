@@ -8,4 +8,5 @@ export default interface Formation {
     description: string;
     duree: string;
     ville: string;
+    detail: string;
 }
