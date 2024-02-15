@@ -1,0 +1,151 @@
+.backgroundAdmin{
+    background: url(../../../assets/fond-bureau-flou.png);
+    background-size: cover;
+    padding: 40px;
+    height: 800px;
+    display: flex;
+    justify-content: space-around
+    
+}
+.positionForm{
+    display: flex;
+    flex-direction: row;
+    width: 200;
+}
+.positionFormBlock{
+    width: 500px;
+}
+.positionFormBlock2{
+    margin-left: 30px;
+}
+.containerCreation {
+    /*width: 1000px;*/
+    height: 730px;
+    /*max-width: 600px;*/
+    padding: 2rem;
+    box-shadow: 0 0 40px rgba(215, 216, 210, 0.2);
+    border-radius: var(--border-radius);
+    font: 500 1rem 'Quicksand', sans-serif;
+    background: rgba(0,0,0, 0.6);
+    color: var(--second-bg-color);
+}
+h1{
+    margin-bottom: 0;
+    padding: 9px;
+}
+.form__title {
+    margin-bottom: 2rem;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--main-bg-color);
+    border-radius: var(--border-radius);
+    text-shadow: var(--main-bg-color);
+    color: #eeeeee;
+}
+.form__input {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    padding: 0.25rem;
+    height: 30px;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    border: 1px solid #dddddd;
+    outline: none;
+    background: #eeeeee;
+}
+
+.form__select{
+    width: 50%;
+}
+.form__textaeraDetail {
+    height: 100px;
+    resize: none;
+}
+.form__textaeraDescription {
+    height: 300px;
+    resize: none;
+}
+.form__input-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    column-gap: 20px;
+}
+.form__input-text{
+    margin-bottom: 4px;
+    text-align: left;
+    color: #eeeeee;
+}
+.div-button{
+    margin-top: 20px;
+}
+.form__button {
+    
+    width: 50%;
+    height: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background: var(--first-color);
+}
+.form__button:hover {
+    background: var(--third-color);
+}
+.form__button:active {
+    transform: scale(0.98);
+}
+/* Pop up formulaire envoyé */
+.popup{
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translate(-50%,-50%)scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color:#333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+  }
+
+  .open-popup{
+    visibility: visible;
+    top:50%;
+    transform: translate(-50%,-50%)scale(1);
+  }
+
+  .popup img{
+    width:100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .popup h1{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+  }
+
+  .popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: var(--second-color);
+    color:#fff;
+    border:0;
+    outline:none;
+    font-size:18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+
+  }

@@ -1,0 +1,25 @@
+.backgroundAdmin{
+    background: url(../../../assets/fond-bureau-flou.png);
+    background-size: cover;
+    padding: 40px;
+    height: 1000px;
+    
+    
+}
+.containerCard {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+.card{
+    width: 500px;
+    height: 400px;
+    max-width: 600px;
+    padding: 2rem;
+    
+    box-shadow: 0 0 40px rgba(215, 216, 210, 0.2);
+    border-radius: var(--border-radius);
+    font: 500 1rem 'Quicksand', sans-serif;
+    background: rgba(0,0,0, 0.6);
+    color: var(--second-bg-color);
+}
