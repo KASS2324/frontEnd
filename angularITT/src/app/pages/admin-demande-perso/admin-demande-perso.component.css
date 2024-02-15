@@ -1,6 +1,20 @@
+.image{
+  background: url(../../../assets/fond-bureau.jpg);
+  background-size: cover;
+}
+
+.corps-de-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255 255 255 / 30%);
+  backdrop-filter: blur(10px);
+  min-height: 500px;
+
+}
+
 .admin-container {
     max-width: 800px;
-    margin: 20px auto;
   }
   
   .contact-details-grid {
@@ -15,3 +29,12 @@
     text-align: left;
   }
   
+section.sectionTitle {
+  height: 60px;
+  background-color: var(--main-bg-color);
+  color: var(--second-bg-color);
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  padding-left: 6rem;
+}
