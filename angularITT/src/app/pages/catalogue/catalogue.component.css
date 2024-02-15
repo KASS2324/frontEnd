@@ -15,9 +15,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--second-bg-color);
+  background-color:#D7D9CE90;
   border-radius: 10px;
-  width: auto;
+  width: 40%;
   padding: 10px 20px 10px 20px;
   margin-top: 30px;
 
@@ -43,6 +43,12 @@
 .financer{
   display: flex;
   justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+  padding: 5px 10px 5px 10px;
+
+  
 
 }
 .financer a{
@@ -71,7 +77,7 @@ div.parent {
 div.box1 {
   width: 300px;
   height: 150px;
-  background-color: var(--second-bg-color);
+  background-color: #D7D9CE90 ;
 }
 
 .parent h3 {
@@ -100,13 +106,14 @@ p {
 div.box2 {
   width: 300px;
   height: 150px;
-  background-color: var(--second-bg-color);
+  background-color: #D7D9CE90 ;
 }
 
 div.box3 {
   width: 300px;
   height: 150px;
-  background-color: var(--second-bg-color);
+  background-color:#D7D9CE90;
+
 }
 
 #rh {
@@ -180,6 +187,7 @@ div.flou {
 
 h2 , h3{
   font-weight: bold;
+  margin: 0;
 }
 .management {
   display: flex;
@@ -192,7 +200,7 @@ h2 , h3{
 }
  ul{
 
-  list-style-type: none;
+  list-style-type: disclosure-closed;
   text-align: left;
 }
 .gestions {
@@ -211,6 +219,24 @@ h2{
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+
+}
+.finances{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+.cadrecentral{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width:40% ;
+  background-color: #D7D9CE90;
+
 
 }
 

@@ -9,7 +9,11 @@
         <li>
           <a>Resouces humaines</a>
           <ul class="submenu" id="submenu1">
-            <li><a (click)="allerVersElement(humain)">Pratiques des ressources humaines</a></li>
+            <li>
+              <a (click)="allerVersElement(humain)"
+                >Pratiques des ressources humaines</a
+              >
+            </li>
             <li><a>Initier une démarche RSE à la RH</a></li>
             <li><a>Posture et savoir RH</a></li>
             <li><a>Rémunération et pilotage RH</a></li>
@@ -18,8 +22,8 @@
         <li>
           <a>Management</a>
           <ul class="submenu" id="submenu2">
-            <li><a (click)="allerVersElement(man)" >Management</a></li>
-            <li><a  (click)="allerVersElement(gest)">Gestion de projet</a></li>
+            <li><a (click)="allerVersElement(man)">Management</a></li>
+            <li><a (click)="allerVersElement(gest)">Gestion de projet</a></li>
             <li><a>Systèmes d'information</a></li>
             <li><a>Chef de projet Informatique</a></li>
           </ul>
@@ -27,7 +31,7 @@
         <li>
           <a>Finances</a>
           <ul class="submenu" id="submenu3">
-            <li><a>Analyste financier</a></li>
+            <li><a (click)="allerVersElement(fin)">Analyste financier</a></li>
             <li><a>Conseiller financier</a></li>
             <li><a>Ficalité</a></li>
             <li><a>Controleur Financier</a></li>
@@ -49,12 +53,13 @@
 
     <article class="formules">
       <div class="financer">
-      <h3><img src="../../../assets/fianancerformation.png" alt=""> <a>Financer ma formation</a></h3>
-    </div>
+        <div class="cadrecentral">
+            <img src="../../../assets/fianancerformation.png" alt="" />
+            <h3> <a>Financer ma formation</a> </h3>
+        </div>
+      </div>
       <div class="formule1">
-        <span> 3 formules :</span> 
-    
-        
+        <span> 3 formules :</span>
       </div>
 
       <div class="parent">
@@ -92,10 +97,9 @@
   </div>
 </section>
 <section class="bandeau" #language>
- <!-- <h2>Catalogue</h2>-->
-
+  <!-- <h2>Catalogue</h2>-->
 </section>
-<div class="developpement" >
+<div class="developpement">
   <h2>Langages Informatiques</h2>
   <h3>Java</h3>
   <ul class="JAVA">
@@ -131,36 +135,39 @@
 <div class="management" #man>
   <H2>Managements </H2>
   <h3>Management</h3>
- <ul class="manager">
+  <ul class="manager">
     <li>Cohésion d'équipe</li>
     <li>Gestion de conflits</li>
     <li>Gestion du stress</li>
     <li>Style de Leadership</li>
   </ul>
-
-
 </div>
 
 <div class="gestions" #gest>
   <H2>Gestion de projet </H2>
   <ul class="gestion">
-    <li>Les fondamentaux de la gestion de projet </li>
-    <li>Conduite de changement </li>
+    <li>Les fondamentaux de la gestion de projet</li>
+    <li>Conduite de changement</li>
     <li>Gestion du stress</li>
     <li>Microsoft Project</li>
   </ul>
-
-
 </div>
 
 <div class="humaines" #humain>
-  <H2>Pratiques des ressources humaines  </H2>
+  <H2>Pratiques des ressources humaines </H2>
   <ul class="humaine">
-    <li>Gestion administrative des RH </li>
+    <li>Gestion administrative des RH</li>
     <li>Recrutement</li>
-    <li>Gestion des compétences et carrières </li>
+    <li>Gestion des compétences et carrières</li>
     <li>Formation professionnelle</li>
   </ul>
-
-
+</div>
+<div class="finances" #fin>
+  <H2>Finances </H2>
+  <ul class="finance">
+    <li>Analyses et diognostic financiers</li>
+    <li>Micro et macroéconomie</li>
+    <li>Gestion financière et budgetaire</li>
+    <li>Formation professionnelle</li>
+  </ul>
 </div>
