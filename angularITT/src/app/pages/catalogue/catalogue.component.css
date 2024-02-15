@@ -1,6 +1,7 @@
 .baniere {
   background-image: url(../../../assets/background-catalogue.jpg);
   background-size: cover;
+
 }
 
 .titres {
@@ -23,13 +24,40 @@
 }
 
 .formule1 {
-  justify-content: center;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
   margin-left: 20px;
   color: black;
   width: auto;
   color: white;
+
+}
+.formule1 span {
+  color: black;
+  font-size: 1.5rem;
+
+}
+
+.financer{
+  display: flex;
+  justify-content: center;
+
+}
+.financer a{
+  cursor: pointer;
+}
+
+
+
+
+
+.formules img{
+  height: 50px;
+  width: 50px;
+
+
 }
 
 div.parent {
@@ -50,6 +78,7 @@ div.box1 {
   text-align: center;
   margin-top: 10px;
   font-weight: bold;
+  text-decoration: underline;
 }
 
 p {
@@ -86,14 +115,6 @@ div.box3 {
 div a {
   font-weight: bold;
   color: black;
-}
-
-.individuel {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-
- margin-top: 200px
 }
 
 .dropdownmenu ul ul {
@@ -134,18 +155,13 @@ div a {
 
 .dropdownmenu ul ul li:hover > a {
   background-color: var(--first-color);
+  cursor: pointer;
 }
 
 #submenu1 a {
   font-size: smaller;
 
 }
-
-/**article {
-  background-color: rgba(0, 0, 0, 0.6);
-
-}**/
-
 .submenu{
   padding : 0 ;
 }
@@ -154,4 +170,49 @@ div.flou {
   background-color: rgb(255 255 255 / 30%);
   backdrop-filter: blur(10px);
 }
+.developpement{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+
+h2 , h3{
+  font-weight: bold;
+}
+.management {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.management h3{
+  font-weight: bold;
+}
+ ul{
+
+  list-style-type: none;
+  text-align: left;
+}
+.gestions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+h2{
+  padding: 1.5rem;
+  text-decoration: underline;
+}
+.humaines{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+
+
 
