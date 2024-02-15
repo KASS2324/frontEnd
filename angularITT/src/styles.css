@@ -12,7 +12,7 @@
 }
 
 body {
-    --first-color: #119DA4;
+    --first-color: rgb(17, 157, 164);
     --second-color: #0C7489;
     --third-color: #13505B;
     --main-bg-color: #040404;

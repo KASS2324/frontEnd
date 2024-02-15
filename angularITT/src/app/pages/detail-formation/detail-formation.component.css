@@ -57,6 +57,7 @@
 
 .contourCarte img {
     width: -webkit-fill-available;
+    margin-bottom: 2rem;
 }
 
 .carteTitre {
