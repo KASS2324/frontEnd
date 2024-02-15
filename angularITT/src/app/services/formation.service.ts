@@ -21,7 +21,7 @@ export class FormationService {
   }
 
   createFormation(formation: Formation): Observable<Formation> {
-    return this.httpClient.post<Formation>(`${this.apiUrl}/formations`, formation);
+    return this.httpClient.post<Formation>(`${this.apiUrl}/formations/save`, formation);
   }
 
   updateFormation(formation: Formation): Observable<Formation> {
@@ -41,5 +41,14 @@ export class FormationService {
   }
   getThemesFormations(): Observable<String[]> {
     return  this.httpClient.get<String[]>(`${this.apiUrl}/formations/themes`);
+  }
+  getNomThemesFormations(): Observable<String[]> {
+    return  this.httpClient.get<String[]>(`${this.apiUrl}/attributs/byNomThemes`);
+  }
+  getSousThemesFormations(): Observable<String[]> {
+    return  this.httpClient.get<String[]>(`${this.apiUrl}/attributs/byNomSousTheme`);
+  }
+  getCategorieFormations(): Observable<String[]> {
+    return  this.httpClient.get<String[]>(`${this.apiUrl}/attributs/byNomCategorie`);
   }
 }
