@@ -1,83 +1,45 @@
-<div class="bg_img">
-    <div class="flou">
-        <section class="titres">
-            <!-- <p class="grandTitre">{{formation.categorie}}</p> -->
-            <p class="sousTitre">{{formation.nom}}</p>
-            <div class="fondPresITT">
-                <p class="presentationITT">{{formation.description}}</p>
-            </div>
-        </section>
-    </div>
-
-</div>
-<div class="contenu-detail">
-    <div class="formation">
-        <div class="detail-formation">
-            <h3 class="sousTitre">Détails de la Formation :</h3>
-            <p>{{formation.detail}}</p>
+<main>
+    <section class="heroSection">
+        <div class="flou">
+            <section class="titres">
+                <p class="grandTitre">{{formation.nom}}</p>
+                <p class="sousTitre"></p>
+                <div class="fondPresITT">
+                    <p class="presentationITT">{{formation.description}}</p>
+                </div>
+            </section>
         </div>
-        <div class="sessions-lieu">
-            <div class="sessions">
-                <h3 class="sousTitre">Sessions :</h3>
-                @for (session of sessions; track session) {
-                    <p>Du {{session.dateStartSession}} au {{session.dateEndSession}}</p>
-                }
-            </div>
-            <div class="lieu">
-                <h3 class="sousTitre">Lieu de la Formation :</h3>
-                <p>{{formation.ville}}</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="image-container">
-        <img src="../../../assets/bureau-flou.jpg" alt="Image de la formation">
-    </div>
-
-    <div class="preq-ins">
-        <button class="preq-test-btn">Passer les tests de prérequis</button>
-        <button class="inscription-btn">S'inscrire à la formation</button>
-    </div>
-</div>
-
-
-<!--  
-<div class="contenu-detail">
-    
-    <section class="formation">
-
-        <p class="sousTitre">Détails de la Formation : </p>
-
-        <section class="detail-formation">
-
-            <p>{{formation.detail}}</p>
-
-        </section>
-
     </section>
-    <div class="ses-lieu">
+    <section class="carteSection" #carteSection>
+        <div class="contourCarte">
+            <img src="../../../assets/fond-bureau.jpg" alt="fond-bureau">
+        </div>
+        <div class="descCarte">
+            <h3 class="carteTitre">Détails de la Formation</h3>
+            <p>{{formation.detail}}</p>
+            <div class="ses-lieu">
         
-        <section class="sessions">
-            <p class="sousTitre">Sessions : </p>
-
-            @for (session of sessions; track session) {
-                <p>Du {{session.dateStartSession}} au {{session.dateEndSession}}</p>
-            }
-
-        </section>
-
-        <section class="lieu">
-            <p class="sousTitre">Lieu de la Formation : </p>
-
-            <p>{{formation.ville}}</p>
-
-        </section>
-
-    </div>
-
-    <div class="preq-ins">
+                <section class="sessions">
+                    <p class="carteTitre">Sessions : </p>
         
-    </div>
+                    @for (session of sessions; track session) {
+                        <p>Du {{session.dateStartSession}} au {{session.dateEndSession}}</p>
+                    }
+        
+                </section>
+        
+                <section class="lieu">
+                    <p class="carteTitre">Lieu de la Formation : </p>
+        
+                    <p>{{formation.ville}}</p>
+        
+                </section>
+        
+            </div>
 
-</div>
--->
+            <button class="carteButton" mat-raised-button>Tests de prérequis</button>
+            <button class="carteButton" mat-raised-button>Inscrivez vous</button>
+        </div>
+    </section>
+</main>
+
