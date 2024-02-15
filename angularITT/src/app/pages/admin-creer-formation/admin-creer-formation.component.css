@@ -59,8 +59,12 @@ h1{
 .form__select{
     width: 50%;
 }
-.form__textaera {
-    height: 200px;
+.form__textaeraDetail {
+    height: 100px;
+    resize: none;
+}
+.form__textaeraDescription {
+    height: 300px;
     resize: none;
 }
 .form__input-group {
