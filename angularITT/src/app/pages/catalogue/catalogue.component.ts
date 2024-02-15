@@ -6,15 +6,19 @@ import { Router } from '@angular/router';
 
 
 
+
 @Component({
-  selector: 'app-catalogue',
-  standalone: true,
-  imports: [MaterialModule],
-  templateUrl:'./catalogue.component.html',
-  styleUrl: './catalogue.component.css'
+    selector: 'app-catalogue',
+    standalone: true,
+    templateUrl: './catalogue.component.html',
+    styleUrl: './catalogue.component.css',
+    imports: [MaterialModule]
 })
 export class CatalogueComponent {
 
+  allerVersElement($element: any): void {
+    $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+  }
 
   //constructor(private router : Router){}
 

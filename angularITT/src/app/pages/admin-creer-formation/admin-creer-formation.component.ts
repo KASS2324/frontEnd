@@ -25,8 +25,8 @@ export class AdminCreerFormationComponent {
     prix: ['', [Validators.minLength(2), Validators.required]],
     description: [''],
     duree: ['', [Validators.minLength(1), Validators.required ]],
-    ville: ['', [ Validators.minLength(2), Validators.required]]
-    
+    ville: ['', [ Validators.minLength(2), Validators.required]],
+    detail: ['']    
   });
   
   categories: String[] = [];
@@ -50,10 +50,37 @@ export class AdminCreerFormationComponent {
     this.submitted = true
     if (this.formationForm.valid) {
       this.addFormation();
+      this.openPopup();
     }
+  }
+  ngOnInit(): void {
+    this.formationService.getThemesFormations().subscribe((themes) => { this.themes = themes });
+    this.formationService.getSousThemesFormations().subscribe((sousthemes) => { this.sousThemes = sousthemes });
+    this.formationService.getCategorieFormations().subscribe((categorie) => { this.categories = categorie });
   }
 
   public get form() {
     return this.formationForm.controls;
   }
+
+    //open pop up window
+    public openPopup() {
+      // Get  variable by element id
+    
+      const popup = document.getElementById('popup');
+      if (popup !== null) {
+        popup.classList.add("open-popup");
+      }
+  
+    }
+  
+    // Close pop up window
+    public closePopup() {
+    
+        const popup = document.getElementById('popup');
+      if (popup !== null) {
+        popup.classList.remove("open-popup");
+      }
+  
+    }
 }

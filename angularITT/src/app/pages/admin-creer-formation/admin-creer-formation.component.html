@@ -31,8 +31,7 @@
             </div>
             <div class="form__input-group">
               <label class ="form__input-text" for="theme">Catégorie * : </label>
-              <select name="categorie" class="form__input form__select" id="categorie" formControlName="categorie" >
-                <option value="Selectionner">Sélectionner</option>
+              <select name="categorie" class="form__input form__select" id="categorie" formControlName="categorie" placeholder="khvhk">
                 @for (categorie of categories; track categorie) {
                     <option [value]="categorie">{{ categorie }}</option>
                 }
@@ -42,7 +41,6 @@
             <div class="form__input-group">
               <label class ="form__input-text" for="theme">Thème : </label>
               <select name="theme" class="form__input form__select" id="theme" formControlName="theme">
-                <option value="Selectionner">Sélectionner</option>
                 @for (theme of themes; track theme) {
                     <option [value]="theme">{{ theme }}</option>
                 }
@@ -52,7 +50,6 @@
             <div class="form__input-group">
               <label class ="form__input-text" for="sousTheme">Sous-thème : </label>
               <select name="sousTheme" class="form__input form__select" id="sousTheme" formControlName="sousTheme">
-                <option value="Selectionner">Sélectionner</option>
                 @for (sousTheme of sousThemes; track sousTheme) {
                     <option [value]="sousTheme">{{ sousTheme }}</option>
                 }
@@ -145,7 +142,7 @@
               <label class ="form__input-text" for="detail">Détail de la formation * : </label>
               <div class="form__input-error-message"></div>
               <textarea class="form__input form__textaera " id="detail" formControlName="detail" placeholder="Détail ..." rows="8"></textarea>
-              @if (submitted && form['description'].invalid) {
+              @if (submitted && form['detail'].invalid) {
                 <span>
                   @if (form['detail'].hasError('minlength')) {
                   <span>
@@ -168,6 +165,16 @@
           <button class="form__button" type="submit">Enregistrer</button>
         </div>
 
+        
+ 
       </form>
-  </div>
+        <!-- Envoi Formulaire avec succès -->
+        <div class="popup" id="popup">
+          <img src="../../../assets/tick.png" />
+          <h1>Succès !</h1>
+          <p>La création de la formation est effectuer </p>
+          <button type="button" (click)="closePopup()">OK</button>
+        </div>
+    
+   </div>
 </div>

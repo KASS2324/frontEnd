@@ -42,4 +42,13 @@ export class FormationService {
   getThemesFormations(): Observable<String[]> {
     return  this.httpClient.get<String[]>(`${this.apiUrl}/formations/themes`);
   }
+  getNomThemesFormations(): Observable<String[]> {
+    return  this.httpClient.get<String[]>(`${this.apiUrl}/attributs/byNomThemes`);
+  }
+  getSousThemesFormations(): Observable<String[]> {
+    return  this.httpClient.get<String[]>(`${this.apiUrl}/attributs/byNomSousTheme`);
+  }
+  getCategorieFormations(): Observable<String[]> {
+    return  this.httpClient.get<String[]>(`${this.apiUrl}/attributs/byNomCategorie`);
+  }
 }
