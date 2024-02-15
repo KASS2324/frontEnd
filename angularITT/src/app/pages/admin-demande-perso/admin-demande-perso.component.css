@@ -1,0 +1,17 @@
+.admin-container {
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .contact-details-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+  }
+  
+  .header {
+    background-color: #f2f2f2;
+    padding: 8px;
+    text-align: left;
+  }
+  
