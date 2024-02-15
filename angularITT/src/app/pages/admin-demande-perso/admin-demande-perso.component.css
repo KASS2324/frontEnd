@@ -14,19 +14,24 @@
 }
 
 .admin-container {
-    max-width: 800px;
+    max-width: 1200px;
+    background-color: var(--second-bg-color);
+    border-color: var(--main-bg-color);
   }
   
   .contact-details-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 5px;
+    background-color: var(--second-bg-color);
   }
   
   .header {
-    background-color: #f2f2f2;
+    background-color: #e8e6e6;
     padding: 8px;
-    text-align: left;
+    text-align: center;
+    text-shadow: black;
+    font-weight: bold;
   }
   
 section.sectionTitle {
@@ -37,4 +42,16 @@ section.sectionTitle {
   align-items: flex-end;
   width: 100%;
   padding-left: 6rem;
+}
+
+.items{
+  text-align: center;
+  color: white;
+  background-color: var(--main-bg-color);
+  padding: 5px;
+}
+
+#demandes{
+  text-align: left;
+  color: white;
 }

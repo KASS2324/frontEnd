@@ -13,11 +13,11 @@
         <div class="header">Demande</div>
 
         @for (demande of demandes; track demande){
-        <div>{{ demande.user.prenom }}</div>
-        <div>{{ demande.user.nom }}</div>
-        <div>{{ demande.user.entreprise }}</div>
-        <div>{{ demande.user.email }}</div>
-        <div>{{ demande.demande }}</div>
+        <div class="items">{{ demande.user.prenom }}</div>
+        <div class="items">{{ demande.user.nom }}</div>
+        <div class="items">{{ demande.user.entreprise }}</div>
+        <div class="items">{{ demande.user.email }}</div>
+        <div class="items" id="demandes">{{ demande.demande }}</div>
         }
       </div>
     </div>
