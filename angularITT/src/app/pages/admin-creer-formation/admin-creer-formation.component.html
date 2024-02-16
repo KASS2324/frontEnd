@@ -11,7 +11,7 @@
         <div class="positionForm">
             <div class="positionFormBlock">
             <div class="form__input-group">
-              <label class ="form__input-text" for="nom">Titre de la foramtion * : </label>
+              <label class ="form__input-text" for="nom">Titre de la formation * : </label>
               <div class="form__input-error-message"></div>
               <input type="text" class="form__input" id="nom" formControlName="nom" placeholder="Titre"/>
               @if (submitted && form['nom'].invalid) {
@@ -139,19 +139,19 @@
             </div>
 
             <div class="form__input-group">
-              <label class ="form__input-text" for="detail">Détail de la formation * : </label>
+              <label class ="form__input-text" for="detail">Détails de la formation * : </label>
               <div class="form__input-error-message"></div>
-              <textarea class="form__input form__textaeraDescription " id="detail" formControlName="detail" placeholder="Détail ..." rows="8"></textarea>
+              <textarea class="form__input form__textaeraDescription " id="detail" formControlName="detail" placeholder="Détails ..." rows="8"></textarea>
               @if (submitted && form['detail'].invalid) {
                 <span>
                   @if (form['detail'].hasError('minlength')) {
                   <span>
-                    * La détail doit contenir au minimum 100 caractères
+                    * La détails doit contenir au minimum 100 caractères
                   </span>
                   }
                   @if (!form['detail'].value) {
                   <span>
-                    * Détail obligatoire
+                    * Détails obligatoire
                   </span>
                   }
                 </span>
@@ -161,7 +161,7 @@
         </div>
 
         <div class="div-button">
-          <p>Les champs avec une * sont oblifatoires</p>
+          <p>Les champs avec une * sont obligatoires</p>
           <button class="form__button" type="submit">Enregistrer</button>
         </div>
 
