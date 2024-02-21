@@ -1,0 +1,25 @@
+<div class="image">
+  <section class="sectionTitle">
+    <h2>Demandes Personalisées</h2>
+  </section>
+
+  <div class="corps-de-page">
+    <div class="admin-container">
+      <div class="contact-details-grid">
+        <div class="header">Prénom</div>
+        <div class="header">Nom</div>
+        <div class="header">Entreprise</div>
+        <div class="header">Email</div>
+        <div class="header">Demande</div>
+
+        @for (demande of demandes; track demande){
+        <div class="items">{{ demande.user.prenom }}</div>
+        <div class="items">{{ demande.user.nom }}</div>
+        <div class="items">{{ demande.user.entreprise }}</div>
+        <div class="items">{{ demande.user.email }}</div>
+        <div class="items" id="demandes">{{ demande.demande }}</div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

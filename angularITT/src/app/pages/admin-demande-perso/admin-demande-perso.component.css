@@ -1,0 +1,57 @@
+.image{
+  background: url(../../../assets/fond-bureau.jpg);
+  background-size: cover;
+}
+
+.corps-de-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255 255 255 / 30%);
+  backdrop-filter: blur(10px);
+  min-height: 500px;
+
+}
+
+.admin-container {
+    max-width: 1200px;
+    background-color: var(--second-bg-color);
+    border-color: var(--main-bg-color);
+  }
+  
+  .contact-details-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+    background-color: var(--second-bg-color);
+  }
+  
+  .header {
+    background-color: #e8e6e6;
+    padding: 8px;
+    text-align: center;
+    text-shadow: black;
+    font-weight: bold;
+  }
+  
+section.sectionTitle {
+  height: 60px;
+  background-color: var(--main-bg-color);
+  color: var(--second-bg-color);
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  padding-left: 6rem;
+}
+
+.items{
+  text-align: center;
+  color: white;
+  background-color: var(--main-bg-color);
+  padding: 5px;
+}
+
+#demandes{
+  text-align: left;
+  color: white;
+}

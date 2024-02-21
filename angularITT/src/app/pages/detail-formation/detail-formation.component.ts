@@ -4,11 +4,12 @@ import { FormationService } from '../../services/formation.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import Session from '../../models/session.model';
 import { SessionService } from '../../services/session.service';
+import { MaterialModule } from '../../material/material.module';
 
 @Component({
   selector: 'app-detail-formation',
   standalone: true,
-  imports: [],
+  imports: [MaterialModule],
   templateUrl: './detail-formation.component.html',
   styleUrl: './detail-formation.component.css'
 })
